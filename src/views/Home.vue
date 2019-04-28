@@ -1,7 +1,7 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <img alt="einfachiotatangle" src="../assets/einfachiotatangle.jpg">
+    <HelloWorld msg="Willkommen bei einfachIOTA"/>
   </div>
 </template>
 
