@@ -1,18 +1,17 @@
 <template>
   <div class="home">
-    <img alt="einfachiotatangle" src="../assets/einfachiotatangle.jpg">
-    <HelloWorld msg="Willkommen bei einfachIOTA"/>
+    <LatestNews/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import LatestNews from '@/components/LatestNews.vue'
 
 export default {
   name: 'home',
   components: {
-    HelloWorld
+    LatestNews
   }
 }
 </script>
