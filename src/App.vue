@@ -1,8 +1,13 @@
 <template>
-  <div id="app">
+<el-container>
+  <el-header> 
     <NavBar />
+    </el-header>
+  <el-main>
     <router-view/>
-  </div>
+  </el-main>
+</el-container>
+
 </template>
 
 <script>
@@ -19,13 +24,11 @@ export default {
 
 body {
  margin: 0;
+ font-family: 'Nunito', sans-serif;
+ -webkit-font-smoothing: antialiased;
+ -moz-osx-font-smoothing: grayscale;
 } 
-#app {
-  font-family: 'Nunito', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
- 
-}
+
 h1, h2, h3, h4 {
   margin: 0;
   font-weight: 700;
