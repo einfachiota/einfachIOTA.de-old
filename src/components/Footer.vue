@@ -3,9 +3,9 @@
     <div class="row">
       <div class="footer-main">
         <h4>einfachIOTA</h4>
-        <a href="www.einfachIOTA.de/news" class="footer-main-link">News</a>
-        <a href="pool.einfachIOTA.de/news" class="footer-main-link">Pool</a>
-        <a href="www.einfachIOTA.de/news" class="footer-main-link">Team</a>
+        <router-link to="news" class="footer-main-link">Neuigkeiten</router-link>
+        <router-link to="projects" class="footer-main-link">Projekte</router-link>
+        <a href="https://pool.einfachIOTA.de/news" class="footer-main-link">Pool</a>
       </div>
       <div class="footer-main">
         <h4>Mehr</h4>
@@ -44,7 +44,6 @@
   width: 100%;
   padding: 40px 150px;
   box-sizing: border-box;
-  height: 340px;
   text-align: center;
   .container {
     box-sizing: border-box;
