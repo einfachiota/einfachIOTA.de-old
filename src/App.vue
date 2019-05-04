@@ -54,10 +54,6 @@ p {
   font-size: 16px;
   line-height: 1.5;
 }
-.main {
-  margin-top: 70px;
-  padding-top: 24px;
-}
 :root {
   --primary: #139B48;
   --primary-2: #A2CF6F;
