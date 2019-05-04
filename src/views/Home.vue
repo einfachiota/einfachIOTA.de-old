@@ -9,7 +9,7 @@
       <p>Wir liefern euch die neusten Informationen aus der IOTA Foundation.</p>
       <p>Die Orginal Blogeintrage für euch übersetzt!</p>
       <LatestNews/>
-      <router-link to="/news" tag="button" class="el-button">Mehr Neuigkeiten</router-link>
+      <router-link to="/news" tag="button" class="el-button">Alle Neuigkeiten</router-link>
     </div>
     <div class="projects">
       <h2>Projekt der Woche</h2>
@@ -19,6 +19,7 @@
           <h3 class="medium">{{ item }}</h3>
         </el-carousel-item>
       </el-carousel>
+      <router-link to="/news" tag="button" class="el-button">Alle Projekte</router-link>
     </div>
   </div>
 </template>
