@@ -5,7 +5,7 @@
         <h4>einfachIOTA</h4>
         <router-link to="news" class="footer-main-link">Neuigkeiten</router-link>
         <router-link to="projects" class="footer-main-link">Projekte</router-link>
-        <a href="https://pool.einfachIOTA.de/news" class="footer-main-link">Pool</a>
+        <a href="https://pool.einfachIOTA.de" class="footer-main-link">Pool</a>
       </div>
       <div class="footer-main">
         <h4>Mehr</h4>
