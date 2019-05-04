@@ -33,7 +33,6 @@ export default {
         .browse({ limit: 5, include: "tags,authors" })
         .then(posts => {
           this.posts = posts;
-          console.log("posts", posts);
         })
         .catch(err => {
           console.error(err);

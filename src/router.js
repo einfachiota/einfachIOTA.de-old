@@ -5,6 +5,7 @@ import News from './views/News.vue'
 import Projects from './views/Projects.vue'
 import Imprint from './views/Imprint.vue'
 import Privacy from './views/Privacy.vue'
+import Post from './views/Post.vue'
 
 Vue.use(Router)
 
@@ -42,6 +43,11 @@ export default new Router({
       path: '/privacy',
       name: 'privacy',
       component: Privacy
+    },
+    {
+      path: '/post/:slug',
+      name: 'post',
+      component: Post
     },
   ]
 })

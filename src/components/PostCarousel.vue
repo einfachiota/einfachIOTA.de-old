@@ -18,7 +18,8 @@ export default {
   props: ['posts'],
   methods: {
       openPost(post) {
-          console.log("post", post)
+        this.$store.dispatch('savePost', post)
+        this.$router.push({ name: 'post', params: { slug: post.slug } })
       }
   }
 }
