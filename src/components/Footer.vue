@@ -9,20 +9,20 @@
       </div>
       <div class="footer-main">
         <h4>Mehr</h4>
-        <a href="https://discord.gg/WdfXseU" class="footer-main-link">Discord</a>
-        <a href="https://twitter.com/einfachIOTA" class="footer-main-link">Twitter</a>
-            <a href="https://github.com/einfachiota" class="footer-main-link">Github</a>
+        <a href="https://discord.gg/WdfXseU" target="_blank" class="footer-main-link">Discord</a>
+        <a href="https://twitter.com/einfachIOTA" target="_blank" class="footer-main-link">Twitter</a>
+            <a href="https://github.com/einfachiota" target="_blank" class="footer-main-link">Github</a>
       </div>
       <div class="footer-main">
         <h4>Partner</h4>
-        <a href="https://powsrv.io/" class="footer-main-link">powsrv.io</a>
-        <a href="https://tanglebay.org/forum/" class="footer-main-link">Tanglebay.org</a>
+        <a href="https://powsrv.io/" target="_blank" class="footer-main-link">powsrv.io</a>
+        <a href="https://tanglebay.org/forum/" target="_blank" class="footer-main-link">Tanglebay.org</a>
       </div>
       <div class="footer-main">
         <h4>IOTA</h4>
-        <a href="www.iota.org" class="footer-main-link">Website</a>
-        <a href="ecosystem.iota.org" class="footer-main-link">Öksystem</a>
-        <a href="blog.iota.org" class="footer-main-link">Blog</a>
+        <a href="https://www.iota.org" target="_blank" class="footer-main-link">Website</a>
+        <a href="https://ecosystem.iota.org" target="_blank" class="footer-main-link">Öksystem</a>
+        <a href="https://blog.iota.org" target="_blank" class="footer-main-link">Blog</a>
       </div>
     </div>
     <hr>
@@ -70,7 +70,7 @@
       color: var(--light);
       text-decoration: none;
       &:hover {
-        color: var(--secondary-1);
+        color: var(--white);
       }
     }
   }
