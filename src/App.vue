@@ -1,20 +1,23 @@
 <template>
-<el-container>
-  <el-header> 
-    <NavBar />
-    </el-header>
-  <el-main>
-    <router-view/>
-  </el-main>
-</el-container>
-
+  <el-container>
+    <el-header> 
+      <NavBar />
+      </el-header>
+    <el-main>
+      <router-view/>
+    </el-main>
+    <el-footer>
+      <Footer />
+    </el-footer>
+  </el-container>
 </template>
 
 <script>
 import NavBar from '@/components/NavBar.vue'
+import Footer from '@/components/Footer.vue'
 
 export default {
-    components: {NavBar},
+    components: {NavBar, Footer},
 }
 </script>
 
@@ -76,5 +79,8 @@ p {
   --border-radius-sm: 5px;
   --box-shadow: 0 3px 6px rgba(0,0,0,.15);
   --transition-in-out: all 0.3s ease-in-out;
+}
+.el-footer {
+  padding: 0 0 !important;
 }
 </style>
