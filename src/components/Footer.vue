@@ -28,10 +28,10 @@
     <hr>
     <div class="row">
       <div class="footer-main">
-        <a href="www.einfachIOTA.de/news" class="footer-main-link">Impressum</a>
+        <router-link to="imprint" class="footer-main-link">Impressum</router-link>
       </div>
       <div class="footer-main">
-      <a href="pool.einfachIOTA.de/news" class="footer-main-link">Datenschutz</a>
+        <router-link to="privacy" class="footer-main-link">Datenschutz</router-link>
     </div>
     </div>
     
