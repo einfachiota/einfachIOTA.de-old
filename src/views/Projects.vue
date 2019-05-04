@@ -1,7 +1,29 @@
 <template>
   <div class="projects">
     <h1>Projekte der Woche</h1>
-    <pre>{{posts}}</pre>
+    <el-row :gutter="12">
+      <el-col :span="12" v-for="post in posts" :key="post.id">
+        <el-card v-bind:style="{ 'background-image': 'url(' + post.feature_image + ')' }">
+          <div style="padding: 14px;">
+            <h3>{{post.title}}</h3>
+            <div class="bottom clearfix">
+              <el-button type="text" class="button" @click="openPost(post)">zum Artikel</el-button>
+            </div>
+          </div>
+        </el-card>
+      </el-col>
+    </el-row>
+    <br>
+    <hr>
+    <el-pagination
+      @current-change="handleCurrentChange"
+      :current-page="current_page"
+      :page-size="per_page"
+      background
+      layout="prev, pager, next"
+      hide-on-single-page
+      :total="total"
+    ></el-pagination>
   </div>
 </template>
 
@@ -19,27 +41,40 @@ export default {
   components: {},
   data() {
     return {
-      posts: []
+      posts: [],
+      loading: true,
+      per_page: 12,
+      current_page: 1,
+      total: 1
     };
   },
   methods: {
-    loadData: () => {
-      console.log("Load data");
-      // fetch 5 posts, including related tags and authors
+    loadData(page) {
       api.posts
-        .browse({ limit: 5, include: "tags,authors" })
+        .browse({
+          limit: this.per_page,
+          page: page,
+          include: "tags,authors",
+          filter: "tag:projekt-der-woche"
+        })
         .then(posts => {
-          posts.forEach(post => {
-            console.log(post.title);
-          });
+          this.current_page = posts.meta.pagination.page
+          this.total = posts.meta.pagination.total
+          this.posts = posts;
+          window.scrollTo(0,0);
+          this.loading = false;
         })
         .catch(err => {
           console.error(err);
         });
+    },
+    handleCurrentChange(val) {
+      this.currentPage = val;
+      this.loadData(val);
     }
   },
   created() {
-    this.loadData();
+    this.loadData(this.current_page);
   }
 };
 </script>
