@@ -8,7 +8,7 @@
                     <el-button type="text" class="button" @click="openPost(post)">zum Artikel</el-button>
                     </div>
                 </div>
-            </el-card>s
+            </el-card>
         </el-carousel-item>
     </el-carousel>
 </template>
