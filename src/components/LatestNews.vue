@@ -37,7 +37,7 @@ export default {
     loadData() {
       // fetch 5 posts, including related tags and authors
       api.posts
-        .browse({ limit: 5, include: "tags,authors" })
+        .browse({ limit: 2, include: "tags,authors" })
         .then(posts => {
           this.posts = posts;
           console.log("posts", posts);

@@ -1,6 +1,9 @@
 <template>
   <div class="home">
+    <h2>Neuigkeiten</h2>
     <LatestNews/>
+    <router-link to="/news" tag="button" class="el-button">Mehr Neuigkeiten</router-link>
+
   </div>
 </template>
 
