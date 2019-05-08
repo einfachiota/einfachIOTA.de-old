@@ -6,6 +6,7 @@ import Projects from './views/Projects.vue'
 import Imprint from './views/Imprint.vue'
 import Privacy from './views/Privacy.vue'
 import Post from './views/Post.vue'
+import Supporter from './views/Supporter.vue'
 
 Vue.use(Router)
 
@@ -43,6 +44,11 @@ export default new Router({
       path: '/privacy',
       name: 'privacy',
       component: Privacy
+    },
+    {
+      path: '/supporter',
+      name: 'supporter',
+      component: Supporter
     },
     {
       path: '/post/:slug',
