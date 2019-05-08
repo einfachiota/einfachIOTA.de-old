@@ -17,6 +17,12 @@
       <LatestProjects/>
       <router-link to="/projects" tag="button" class="el-button el-button--primary">Alle Projekte</router-link>
     </div>
+    <div class="tutorials">
+      <h2>Tutorials</h2>
+      <p>Hier könnt ihr Experimente mit dem Tangle nachmachen!</p>
+      <LatestTutorials/>
+      <router-link to="/tutorials" tag="button" class="el-button el-button--primary">Alle Projekte</router-link>
+    </div>
   </div>
 </template>
 
@@ -24,11 +30,12 @@
 // @ is an alias to /src
 import LatestNews from '@/components/LatestNews.vue'
 import LatestProjects from '@/components/LatestProjects.vue'
+import LatestTutorials from '@/components/LatestTutorials.vue'
 
 export default {
   name: 'home',
   components: {
-    LatestNews, LatestProjects
+    LatestNews, LatestProjects, LatestTutorials
   }
 }
 </script>

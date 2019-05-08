@@ -17,7 +17,7 @@ const api = new GhostContentAPI({
 });
 
 export default {
-  name: "latestNews",
+  name: "latestTutorials",
   components: {
     PostCarousel
   },
@@ -30,7 +30,7 @@ export default {
     loadData() {
       // fetch 5 posts, including related tags and authors
       api.posts
-        .browse({ limit: 5, include: "tags,authors", filter: 'tag:news' })
+        .browse({ limit: 5, include: "tags,authors", filter: 'tag:tutorials' })
         .then(posts => {
           this.posts = posts;
         })
