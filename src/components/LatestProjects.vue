@@ -54,4 +54,11 @@ export default {
   width: 100%;
   display: block;
 }
+.el-card {
+  background-size: cover;
+  background-position: center;
+}
+.el-card.is-always-shadow {
+  color: white;
+}
 </style>
