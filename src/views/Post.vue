@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h1>Post {{$route.params.slug}}</h1>
-    <pre>{{post}}</pre>
+    <h1>{{post.title}}</h1>
+    <span v-html="post.html"></span>
   </div>
 </template>
 
