@@ -25,7 +25,7 @@ export default {
   methods: {
     fetchPost() {
       api.posts
-        .read({ id: this.$route.params.slug })
+        .read({ slug: this.$route.params.slug })
         .then(post => {
             this.post = post;
         })
