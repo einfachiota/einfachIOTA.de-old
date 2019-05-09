@@ -70,6 +70,9 @@ export default {
   padding: 80px 5%;
   &-background {
       background-color: var(--secondary-2);
+      h2 {
+        color: var(--white);
+      } 
   }
   h2 {
     padding-bottom: 20px;

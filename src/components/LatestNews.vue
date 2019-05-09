@@ -46,12 +46,4 @@ export default {
 </script>
 
 <style>
-.time {
-  font-size: 13px;
-  color: #999;
-}
-.image {
-  width: 100%;
-  display: block;
-}
 </style>
