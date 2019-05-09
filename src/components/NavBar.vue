@@ -11,6 +11,9 @@
       <router-link to="/news" class="nav-item" active-class="active">
         <span>Neuigkeiten</span>
       </router-link>
+       <router-link to="/knowledge" class="nav-item" active-class="active">
+        <span>Wissen</span>
+      </router-link>
       <router-link to="/projects" class="nav-item" active-class="active">
         <span>Projekte</span>
       </router-link>

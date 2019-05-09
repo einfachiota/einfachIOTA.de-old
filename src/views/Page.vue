@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h1>{{post.title}}</h1>
-    <span v-html="post.html"></span>
+    <h1>{{page.title}}</h1>
+    <span v-html="page.html"></span>
   </div>
 </template>
 
@@ -15,19 +15,19 @@ const api = new GhostContentAPI({
 });
 
 export default {
-  name: "post",
+  name: "page",
   params: ["slug"],
   data() {
     return{
-        post: {}
+        page: {}
     } 
   },
   methods: {
     fetchPost() {
-      api.posts
-        .read({ id: this.$route.params.slug })
-        .then(post => {
-            this.post = post;
+      api.pages
+        .read({ slug: this.$route.params.slug })
+        .then(page => {
+            this.page = page;
         })
         .catch(err => {
           console.error(err);
