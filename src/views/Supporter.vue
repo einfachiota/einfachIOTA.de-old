@@ -1,9 +1,15 @@
 <template>
   <div class="supporter">
-    <h1>This is an supporter page</h1>
+    <h1>Unsere Unterstützer</h1>
+    <p>Dank Euch können wir unsere Server bezahlen, danke!</p>
     <el-row :gutter="12">
       <el-col v-for="transaction in transactions" v-bind:key="transaction.hash" :span="12">
-        <el-card shadow="hover">{{getMessage(transaction.signatureMessageFragment)}}</el-card>
+        <el-card shadow="hover">
+          <div slot="header" class="clearfix">
+            <span>{{transaction.value}} IOTA</span>
+            <a :href="'https://thetangle.org/transaction/'+ transaction.hash" target="_blank" style="float: right; padding: 3px 0" type="text">TheTangle.org</a>
+          </div>
+          {{getMessage(transaction.signatureMessageFragment)}}</el-card>
       </el-col>
     </el-row>
   </div>
