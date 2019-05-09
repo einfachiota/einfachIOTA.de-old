@@ -52,10 +52,6 @@ export default {
           console.error(err);
         });
     },
-    openPost(post) {
-      this.$store.dispatch('savePost', post)
-      this.$router.push({ name: 'post', params: { slug: post.slug } })
-    },
     handleCurrentChange(val) {
         this.currentPage = val;
         this.loadData(val);
