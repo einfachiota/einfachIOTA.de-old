@@ -4,20 +4,30 @@
       <h1 class="heading">Willkommen bei einfachIOTA.de</h1>
       <p class="sub-heading">Die Seite, die IOTA einfach erklärt!</p>
     </div>
-    <div class="news">
+    <div class="section news">
       <h2>Neuigkeiten</h2>
       <p>Wir liefern euch die neusten Informationen aus der IOTA Foundation.</p>
       <p>Die Orginal Blogeintrage für euch übersetzt!</p>
       <LatestNews/>
       <router-link to="/news" tag="button" class="el-button el-button--primary">Alle Neuigkeiten</router-link>
     </div>
-    <div class="projects">
+    <div class="section section-background knowledge">
+      <h2>Du bist neu? Was ist IOTA?</h2>
+        <router-link to="/knowledge" tag="button" class="el-button el-button--primary">Entdecke die Grundlagen</router-link>
+    </div>
+    <div class="section projects">
       <h2>Projekte der Woche</h2>
       <p>So sehen echte IOTA Projekte aus.</p>
       <LatestProjects/>
       <router-link to="/projects" tag="button" class="el-button el-button--primary">Alle Projekte</router-link>
     </div>
-    <div class="tutorials">
+
+    <div class="section section-background knowledge">
+      <h2>Bleib auf dem neusten Stand oder mach mit bei der Community!</h2>
+        <a href="https://twitter.com/einfachIOTA" target="_blank" tag="button" class="el-button el-button--primary">Twitter</a>
+        <a href="https://discord.gg/rV3TMSU" target="_blank" tag="button" class="el-button el-button--primary">Discord</a>
+    </div>
+    <div class="section tutorials">
       <h2>Tutorials</h2>
       <p>Hier könnt ihr Experimente mit dem Tangle nachmachen!</p>
       <LatestTutorials/>
@@ -41,6 +51,10 @@ export default {
 </script>
 
 <style lang="scss">
+
+.home {
+   text-align: center;
+}
 .hero {
   padding-top: 120px;
   .heading {
@@ -50,5 +64,15 @@ export default {
     margin-top: 0px;
     font-size: 2.5em;
   }
+}
+
+.section {
+  padding: 80px 5%;
+  &-background {
+      background-color: var(--secondary-2);
+  }
+  h2 {
+    padding-bottom: 20px;
+  } 
 }
 </style>
