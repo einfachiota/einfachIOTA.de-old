@@ -3,11 +3,12 @@
     <el-row :gutter="12">
       <el-col :span="12" v-for="post in posts" :key="post.id">
         <div @click="openPost(post)">
-        <el-card v-bind:style="{ 'background-image': 'url(' + post.feature_image + ')' }">
-          <div style="padding: 14px;">
-            <h3>{{post.title}}</h3>
-          </div>
-        </el-card>
+          <el-card v-bind:style="{ 'background-image': 'url(' + post.feature_image + ')' }">
+            <div class="card-heading" style="padding: 14px;">
+              <h3>{{post.title}}</h3>
+              <p>Zum Artikel</p>
+            </div>
+          </el-card>
         </div>
       </el-col>
     </el-row>
@@ -40,7 +41,7 @@ export default {
 </script>
 
 <style lang="scss">
-.el-card {
-    cursor: pointer;
+.card-heading {
+  cursor: pointer;
 }
 </style>
