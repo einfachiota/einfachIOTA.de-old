@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import News from './views/News.vue'
 import Projects from './views/Projects.vue'
+import Tutorials from './views/Tutorials.vue'
 import Imprint from './views/Imprint.vue'
 import Privacy from './views/Privacy.vue'
 import Post from './views/Post.vue'
@@ -34,6 +35,11 @@ export default new Router({
       path: '/projects',
       name: 'projects',
       component: Projects
+    },
+    {
+      path: '/tutorials',
+      name: 'tutorials',
+      component: Tutorials
     },
     {
       path: '/imprint',

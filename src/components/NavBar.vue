@@ -14,6 +14,9 @@
       <router-link to="/projects" class="nav-item" active-class="active">
         <span>Projekte</span>
       </router-link>
+      <router-link to="/tutorials" class="nav-item" active-class="active">
+        <span>Tutorials</span>
+      </router-link>
       <router-link to="/supporter" class="nav-item" active-class="active">
         <span>Unterstützer</span>
       </router-link>
