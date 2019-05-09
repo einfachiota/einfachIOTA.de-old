@@ -1,34 +1,19 @@
 <template>
   <div class="news">
     <h1>Neuigkeiten von der IOTA Foundation</h1>
-    <el-row :gutter="12">
-      <el-col :span="12" v-for="post in posts" :key="post.id">
-        <el-card v-bind:style="{ 'background-image': 'url(' + post.feature_image + ')' }">
-          <div style="padding: 14px;">
-            <h3>{{post.title}}</h3>
-            <div class="bottom clearfix">
-              <el-button type="text" class="button" @click="openPost(post)">zum Artikel</el-button>
-            </div>
-          </div>
-        </el-card>
-      </el-col>
-    </el-row>
-    <br>
-    <hr>
-    <el-pagination
-      @current-change="handleCurrentChange"
-      :current-page="current_page"
-      :page-size="per_page"
-      background
-      layout="prev, pager, next"
-      hide-on-single-page
+    <PostList
+      :posts="posts"
+      :per_page="per_page"
+      :current_page="current_page"
       :total="total"
-    ></el-pagination>
+       v-on:handleCurrentChange="handleCurrentChange"
+    />
   </div>
 </template>
 
 <script>
 import GhostContentAPI from "@tryghost/content-api";
+import PostList from "@/components/PostList.vue";
 
 const api = new GhostContentAPI({
   url: "https://www.einfachiota.de",
@@ -38,7 +23,7 @@ const api = new GhostContentAPI({
 
 export default {
   name: "news",
-  components: {},
+  components: {PostList},
   data() {
     return {
       posts: [],
