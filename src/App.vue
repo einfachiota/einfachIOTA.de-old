@@ -21,7 +21,7 @@ export default {
 }
 </script>
 
-<style lang="scss" >
+<style lang="scss">
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400|Roboto+Slab:700');
 
@@ -30,6 +30,7 @@ body {
  font-family: 'Open Sans', sans-serif;
  -webkit-font-smoothing: antialiased;
  -moz-osx-font-smoothing: grayscale;
+ color: var(--dark);
 } 
 
 h1, h2, h3, h4 {
@@ -63,6 +64,7 @@ p {
   --secondary-2: #5AB0B2;
   --dark: #3D4449;
   --darker: #0F3535;
+  --gray: #EFEEEF;
   --light: #E2E2E2;
   --white: #FFFFFF;
   --white_5: rgba(255,255,255,.05);
@@ -80,6 +82,19 @@ p {
 }
 .el-footer {
   padding: 0 0 !important;
+}
+
+.el-button {
+  font-family: "Roboto Slab" !important;
+  font-weight: bold !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+  border-radius: 10px !important ;
+  padding: 15px 30px !important;
+}
+.el-button--primary {
+    background-color: var(--primary) !important;
+    border: none !important;
 }
 
 </style>

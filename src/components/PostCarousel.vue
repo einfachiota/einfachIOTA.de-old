@@ -36,8 +36,12 @@ export default {
   background-position: center;
 }
 .card-body {
-  height: 130px;
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  width: calc(100% - 90px);
   padding: 14px;
+  color: var(--white);
   &:hover {
     color: var(--secondary-2);
   }
@@ -45,8 +49,9 @@ export default {
 .slider_item {
   height: 430px;
 }
+
 .el-carousel--horizontal {
     overflow-x: visible !important;
-
 }
+
 </style>
