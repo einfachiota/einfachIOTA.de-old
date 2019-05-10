@@ -10,7 +10,9 @@
         <router-link to="/news" tag="button" class="el-button el-button--primary">Alle Neuigkeiten</router-link>
       </div>
       <div class="divider"></div>
-      <p style="margin-bottom: 50px">Wir liefern euch die neusten Informationen aus der IOTA Foundation. Die Orginal Blogeintrage für euch übersetzt!</p>
+      <p
+        style="margin-bottom: 50px"
+      >Wir liefern euch die neusten Informationen aus der IOTA Foundation. Die Orginal Blogeintrage für euch übersetzt!</p>
       <LatestNews/>
     </div>
     <div class="section section-background knowledge">
@@ -58,10 +60,13 @@
       >Github</a>
     </div>
     <div class="section tutorials">
-      <h2>Tutorials</h2>
+      <div class="headline-wrapper">
+        <h2>Tutorials</h2>
+              <router-link to="/tutorials" tag="button" class="el-button el-button--primary">Alle Projekte</router-link>
+      </div>
       <p>Hier könnt ihr Experimente mit dem Tangle nachmachen!</p>
+      <div class="divider"></div>
       <LatestTutorials/>
-      <router-link to="/tutorials" tag="button" class="el-button el-button--primary">Alle Projekte</router-link>
     </div>
   </div>
 </template>
