@@ -46,12 +46,5 @@ export default {
     color: var(--secondary-2);
   }
 }
-.slider_item {
-  height: 430px;
-}
-
-.el-carousel--horizontal {
-    overflow-x: visible !important;
-}
 
 </style>
