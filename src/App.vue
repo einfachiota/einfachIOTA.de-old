@@ -23,11 +23,11 @@ export default {
 
 <style lang="scss" >
 
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400|Roboto+Slab:700');
 
 body {
  margin: 0;
- font-family: 'Nunito', sans-serif;
+ font-family: 'Open Sans', sans-serif;
  -webkit-font-smoothing: antialiased;
  -moz-osx-font-smoothing: grayscale;
 } 
@@ -35,6 +35,8 @@ body {
 h1, h2, h3, h4 {
   margin: 0;
   font-weight: 700;
+  font-family: 'Roboto Slab', serif;
+
 }
 h1 {
   font-size: 62px;
