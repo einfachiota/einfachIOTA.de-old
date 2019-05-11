@@ -10,13 +10,11 @@
         <router-link to="/news" tag="button" class="el-button el-button--primary">Alle Neuigkeiten</router-link>
       </div>
       <div class="divider"></div>
-      <p
-        style="margin-bottom: 50px"
-      >Wir liefern euch die neusten Informationen aus der IOTA Foundation. Die Orginal Blogeintrage für euch übersetzt!</p>
       <LatestNews/>
     </div>
     <div class="section section-background knowledge">
-      <h2>Du bist neu? Was ist IOTA?</h2>
+      <h2>Du bist neu bei IOTA?</h2>
+      <p>Dann haben wir genau das Richtige für dich! Die Grundlagen von IOTA haben wir in unserem Wiki für dich zusammengefasst und einfach erklärt, schau mal rein! Falls du trotzdem noch Fragen hast, zögere nicht uns zu kontaktieren!</p>
       <router-link
         to="/knowledge"
         tag="button"
@@ -32,14 +30,13 @@
           class="el-button el-button--primary"
         >Entdecke mehr Projekte</router-link>
       </div>
-
-      <p>So sehen echte IOTA Projekte aus.</p>
-      <div class="divider"></div>
+       <div class="divider"></div>
       <LatestProjects/>
     </div>
 
     <div class="section section-background knowledge">
       <h2>Bleib auf dem neusten Stand oder mach mit bei der Community!</h2>
+      <p>Folge uns auf Twitter um immer auf dem neusten Stand zu bleinen. Tritt unsere Discord Server und mach bei der Community mit oder schau auf unserem Gibthub vorbei um dir den Code unserer Projekte anzuschauen!</p>
       <a
         href="https://twitter.com/einfachIOTA"
         target="_blank"
@@ -64,7 +61,6 @@
         <h2>Tutorials</h2>
               <router-link to="/tutorials" tag="button" class="el-button el-button--primary">Alle Projekte</router-link>
       </div>
-      <p>Hier könnt ihr Experimente mit dem Tangle nachmachen!</p>
       <div class="divider"></div>
       <LatestTutorials/>
     </div>
@@ -88,6 +84,10 @@ export default {
 </script>
 
 <style lang="scss">
+
+.el-main {
+  padding: 0px !important;
+}
 .home {
   text-align: center;
 }
@@ -100,9 +100,16 @@ export default {
 }
 
 .section {
-  padding: 80px 5%;
+  padding: 80px 0;
   &-background {
     background-color: var(--gray);
+    p {
+      margin: 40px auto;
+      width: 820px;
+    }
+    a {
+      text-decoration: none;
+    }
   }
   .divider {
     height: 5px;
@@ -110,11 +117,12 @@ export default {
     background-color: var(--primary);
     margin: 20px 0;
   }
-  
+
   .headline-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 }
+
 </style>
