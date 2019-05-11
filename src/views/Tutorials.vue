@@ -1,8 +1,10 @@
 <template>
   <div class="tutorials">
     <div class="hero">
-      <h1 class="heading">Tutorials</h1>
-      <p class="sub-heading">Einfache Übungen zum nachmachen.</p>
+      <div class="container">
+        <h1 class="heading">Tutorials</h1>
+        <div class="divider"></div>
+      </div>
     </div>
     <PostList
       :posts="posts"
@@ -66,3 +68,15 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped>
+
+.tutorials {
+  padding-bottom: 100px;
+}
+
+h1.heading {
+  text-align: left !important;
+}
+
+</style>

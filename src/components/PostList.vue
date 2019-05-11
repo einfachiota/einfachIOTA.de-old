@@ -1,21 +1,8 @@
 <template>
-  <div>
-    <el-row :gutter="12">
-      <el-col  :gutter="12" v-for="post in posts" :key="post.id">
-        <div @click="openPost(post)">
-          <el-card>
-            <div class="image" v-bind:style="{ 'background-image': 'url(' + post.feature_image + ')' }"></div>
-
-        <div class="card-body" @click="openPost(post)">
-          <h3>{{post.title}}</h3>
-          <div class="bottom clearfix">
-            <p>Zum Artikel</p>
-          </div>
-        </div>
-          </el-card>
-        </div>
-      </el-col>
-    </el-row>
+  <div class="container">
+    <div class="row">
+      <PostCard :post="post" v-for="post in  posts" v-bind:key="post.id"/>
+    </div>
     <el-pagination
       @current-change="handleCurrentChange"
       :current-page="current_page"
@@ -29,9 +16,12 @@
 </template>
 
 <script>
+import PostCard from '@/components/PostCard.vue'
+
 export default {
   name: "PostList",
   props: ["posts", "current_page", "per_page", "total"],
+  components: {PostCard},
   methods: {
     handleCurrentChange(val) {
       this.$emit("handleCurrentChange", val);
@@ -46,23 +36,36 @@ export default {
 
 <style lang="scss" scoped>
 
-.el-row {
+.row {
   display: flex;
-}
-.image {
-  height: 400px;
-  width: 100%;
-  min-width: 400px;
-  display: block;
-  background-size: cover;
-  background-position: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 30px -25px 0;
 }
 
-.card-body {
-    height: 130px;
-    cursor: pointer;
-  &:hover {
-    color: var(--secondary-2);
+.card {
+  width: calc((100% - 150px) / 3);
+  margin-bottom: 30px;
+  .image {
+    height: 400px;
+    width: 100%;
+    min-width: 400px;
+    display: block;
+    background-size: cover;
+    background-position: center;
+  }
+  .card-body {
+      height: 130px;
+      cursor: pointer;
+    &:hover {
+      color: var(--secondary-2);
+    }
   }
 }
+
+.el-pagination.is-background {
+  display: flex;
+  justify-content: center;
+}
+
 </style>

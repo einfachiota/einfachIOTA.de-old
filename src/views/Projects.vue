@@ -1,8 +1,10 @@
 <template>
   <div class="projects">
     <div class="hero">
-      <h1 class="heading">Projekte der Woche</h1>
-      <p class="sub-heading">Tolle Projekte aus dem IOTA Ecosystem.</p>
+      <div class="container">
+        <h1 class="heading">Projekte der Woche</h1>
+        <div class="divider"></div>
+      </div>
     </div>
     <PostList
       :posts="posts"
@@ -66,3 +68,15 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped>
+
+.projects {
+  padding-bottom: 100px;
+}
+
+h1.heading {
+  text-align: left !important;
+}
+
+</style>

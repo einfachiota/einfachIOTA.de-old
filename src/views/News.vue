@@ -1,8 +1,10 @@
 <template>
   <div class="news">
     <div class="hero">
-      <h1 class="heading">Neuigkeiten von der IOTA Foundation</h1>
-      <p class="sub-heading">Mit uns immer auf dem neusten Stand.</p>
+      <div class="container">
+        <h1 class="heading">Neuigkeiten von der IOTA Foundation</h1>
+        <div class="divider"></div>
+      </div>
     </div>
     <PostList
       :posts="posts"
@@ -66,5 +68,17 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped>
+
+.news {
+  padding-bottom: 100px;
+}
+
+h1.heading {
+  text-align: left !important;
+}
+
+</style>
 
 
