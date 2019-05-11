@@ -98,7 +98,7 @@
     padding: 15px 50px;
     margin: 0 -50px;
     border-top: 0.5px solid rgba(0,0,0,.25);
-    color: rgba(0,0,0,.25);
+    color: rgba(0,0,0,.75);
     .footer-bottom-col {
       .footer-main-link {
         margin: 0 10px;
@@ -111,7 +111,7 @@
       }
     }
     .footer-main-link {
-      color: rgba(0,0,0,.25);
+      color: rgba(0,0,0,.75);
       text-decoration: none;
       transition: color 200ms ease-in-out;
       &:hover {
