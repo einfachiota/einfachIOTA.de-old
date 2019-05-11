@@ -91,6 +91,9 @@ p {
   letter-spacing: 0.1em !important;
   border-radius: 10px !important ;
   padding: 15px 30px !important;
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 .el-button--primary {
     background-color: var(--primary) !important;
