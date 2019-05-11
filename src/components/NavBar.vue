@@ -63,8 +63,8 @@ export default {
   justify-content: space-between;
   align-items: center;
   background-color: var(--white);
-  box-shadow: var(--box-shadow);
-  transition: var(--transition-200);
+  border-bottom: 5px solid var(--primary);
+  transition: all 200ms ease-in-out;
   .menu-btn {
     display: none;
   }
@@ -82,10 +82,11 @@ export default {
     justify-content: center;
     align-items: center;
     color: var(--dark);
+    font-family: "Roboto Slab";
     font-weight: bold;
     text-decoration: none;
     opacity: 0.75;
-    transition: var(--transition-200);
+    transition: all 200ms ease-in-out;
     &--logo {
       display: flex;
       justify-content: center;
@@ -94,18 +95,18 @@ export default {
       opacity: 1;
       img.logo {
         width: auto;
-        height: 40px;
-        transition: var(--transition-200);
+        height: 35px;
+        transition: all 200ms ease-in-out;
       }
     }
     &:before {
       content: "";
       position: absolute;
-      bottom: -5px;
+      top: -5px;
       height: 10px;
       width: 0;
       border-radius: var(--border-radius);
-      transition: var(--transition-200);
+      transition: all 200ms ease-in-out;
     }
     &:hover,
     &.active {
@@ -129,37 +130,6 @@ export default {
       }
     }
   }
-  &.top {
-    background-color: var(--black_10);
-    box-shadow: none;
-    .nav-item {
-      color: var(--white);
-      &--logo {
-        .logo-wrapper {
-          filter: invert(0%);
-        }
-        .nile-typo {
-          filter: invert(0%);
-        }
-      }
-      &:hover,
-      &.active {
-        background-color: var(--white_10);
-      }
-    }
-  }
-}
-
-img.logo.logo-rotation-2 {
-  opacity: 0.1;
-}
-
-img.logo.logo-rotation-3 {
-  opacity: 0.1;
-}
-
-img.logo.logo-rotation-4 {
-  opacity: 0.1;
 }
 
 // ------------------------------------------

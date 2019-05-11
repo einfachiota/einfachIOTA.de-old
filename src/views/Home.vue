@@ -1,9 +1,23 @@
 <template>
   <div class="home">
+
     <div class="hero">
       <h1 class="heading">Willkommen bei einfachIOTA.de</h1>
       <p class="sub-heading">Die Seite, die IOTA einfach erklärt!</p>
     </div>
+
+    <div class="section section-background knowledge">
+      <div class="container">
+        <h2>Du bist neu bei IOTA?</h2>
+        <p>Dann haben wir genau das Richtige für dich! Die Grundlagen von IOTA haben wir in unserem Wiki für dich zusammengefasst und einfach erklärt, schau mal rein! Falls du trotzdem noch Fragen hast, zögere nicht uns zu kontaktieren!</p>
+        <router-link
+          to="/knowledge"
+          tag="button"
+          class="el-button el-button--primary"
+        >Entdecke die Grundlagen</router-link>
+      </div>
+    </div>
+
     <div class="section news">
       <div class="container">
         <div class="headline-wrapper">
@@ -14,15 +28,35 @@
         <LatestNews/>
       </div>
     </div>
+
     <div class="section section-background knowledge">
-      <h2>Du bist neu bei IOTA?</h2>
-      <p>Dann haben wir genau das Richtige für dich! Die Grundlagen von IOTA haben wir in unserem Wiki für dich zusammengefasst und einfach erklärt, schau mal rein! Falls du trotzdem noch Fragen hast, zögere nicht uns zu kontaktieren!</p>
-      <router-link
-        to="/knowledge"
-        tag="button"
-        class="el-button el-button--primary"
-      >Entdecke die Grundlagen</router-link>
+      <div class="container">
+        <h2>Folge uns oder mach mit</h2>
+        <p>Folge uns auf Twitter um immer auf dem neusten Stand zu bleinen. Tritt unsere Discord Server und mach bei der Community mit oder schau auf unserem Gibthub vorbei um dir den Code unserer Projekte anzuschauen!</p>
+        <a
+          href="https://twitter.com/einfachIOTA"
+          target="_blank"
+          tag="button"
+          class="el-button el-button--primary"
+          style="margin: 0"
+        >Twitter</a>
+        <a
+          href="https://discord.gg/rV3TMSU"
+          target="_blank"
+          tag="button"
+          class="el-button el-button--primary"
+          style="margin: 0 30px 0 30px"
+        >Discord</a>
+        <a
+          href="https://github.com/einfachiota"
+          target="_blank"
+          tag="button"
+          class="el-button el-button--primary"
+          style="margin: 0"
+        >Github</a>
+      </div>
     </div>
+
     <div class="section projects">
       <div class="container">
         <div class="headline-wrapper">
@@ -39,27 +73,17 @@
     </div>
 
     <div class="section section-background knowledge">
-      <h2>Bleib auf dem neusten Stand oder mach mit bei der Community!</h2>
-      <p>Folge uns auf Twitter um immer auf dem neusten Stand zu bleinen. Tritt unsere Discord Server und mach bei der Community mit oder schau auf unserem Gibthub vorbei um dir den Code unserer Projekte anzuschauen!</p>
-      <a
-        href="https://twitter.com/einfachIOTA"
-        target="_blank"
-        tag="button"
-        class="el-button el-button--primary"
-      >Twitter</a>
-      <a
-        href="https://discord.gg/rV3TMSU"
-        target="_blank"
-        tag="button"
-        class="el-button el-button--primary"
-      >Discord</a>
-      <a
-        href="https://github.com/einfachiota"
-        target="_blank"
-        tag="button"
-        class="el-button el-button--primary"
-      >Github</a>
+      <div class="container">
+        <h2>Werde Unterstützer</h2>
+        <p>Wenn dir gefällt was wir tun, kannst du uns auf zweierlei Arten unterstützen. Du kannst unserer Community beitreten und uns bei Aufgaben und Projekten unter die Arme greifen, oder du kannst uns mit einer Geldspende helfen.</p>
+        <router-link
+            to="/supporter"
+            tag="button"
+            class="el-button el-button--primary"
+          >Unsere Unterstützer</router-link>
+      </div>
     </div>
+
     <div class="section tutorials">
       <div class="container">
         <div class="headline-wrapper">
@@ -68,12 +92,13 @@
             to="/tutorials"
             tag="button"
             class="el-button el-button--primary"
-          >Alle Projekte</router-link>
+          >Alle Tutorials</router-link>
         </div>
         <div class="divider"></div>
         <LatestTutorials/>
       </div>  
     </div>
+
   </div>
 </template>
 
@@ -104,9 +129,10 @@ export default {
 .section {
   padding: 80px 0;
   &-background {
-    background-color: var(--gray);
+    background-color: var(--light);
     p {
-      margin: 40px 10px;
+      max-width: 600px;
+      margin: 15px auto 30px;
     }
     a {
       text-decoration: none;

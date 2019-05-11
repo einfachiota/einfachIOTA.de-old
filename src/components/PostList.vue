@@ -1,7 +1,7 @@
 <template>
   <div>
     <el-row :gutter="12">
-      <el-col :span="12" v-for="post in posts" :key="post.id">
+      <el-col  :gutter="12" v-for="post in posts" :key="post.id">
         <div @click="openPost(post)">
           <el-card>
             <div class="image" v-bind:style="{ 'background-image': 'url(' + post.feature_image + ')' }"></div>
@@ -45,9 +45,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.el-row {
+  display: flex;
+}
 .image {
   height: 400px;
   width: 100%;
+  min-width: 400px;
   display: block;
   background-size: cover;
   background-position: center;
