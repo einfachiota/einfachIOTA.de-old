@@ -93,8 +93,6 @@ export default {
 }
 .hero {
   padding-top: 120px;
-  .heading {
-  }
   .sub-heading {
     margin-top: 0px;
     font-size: 2.5em;
@@ -112,10 +110,7 @@ export default {
     background-color: var(--primary);
     margin: 20px 0;
   }
-  &.news {
-    text-align: left;
-    padding: 100px 0 200px;
-  }
+  
   .headline-wrapper {
     display: flex;
     justify-content: space-between;
