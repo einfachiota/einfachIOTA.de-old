@@ -59,13 +59,13 @@ p {
 }
 :root {
   --primary: #00B7C5;
-  --primary-2: #A2CF6F;
+  --primary-darken: #03a3af;
   --secondary: #0B5D9E;
   --secondary-2: #5AB0B2;
   --dark: #3D4449;
   --darker: #0F3535;
-  --gray: #EFEEEF;
-  --light: #E2E2E2;
+  --gray: #E2E2E2;
+  --light: #EFEFEF;
   --white: #FFFFFF;
   --white_5: rgba(255,255,255,.05);
   --white_10: rgba(255,255,255,.1);
@@ -91,15 +91,23 @@ p {
   letter-spacing: 0.1em !important;
   border-radius: 10px !important ;
   padding: 15px 30px !important;
-  &:hover {
-    transform: scale(1.05);
-  }
+  transition: all 200ms ease-in-out !important;
+  border: none !important;
 }
 .el-button--primary {
     background-color: var(--primary) !important;
-    border: none !important;
+    color: var(--white) !important;
+    &:hover {
+      background-color: var(--primary-darken) !important;
+    }
 }
-
+button.el-button.el-button--light {
+  background-color: var(--light) !important;
+  color: var(--dark) !important;
+  &:hover {
+    background-color: grey !important;
+  }
+}
 
 .hero {
   text-align: center;
@@ -110,12 +118,25 @@ p {
   }
 }
 
+.divider {
+  height: 5px;
+  width: 100px;
+  background-color: var(--primary);
+  margin: 20px 0;
+}
 
-  .divider {
-    height: 5px;
-    width: 100px;
-    background-color: var(--primary);
-    margin: 20px 0;
+.container {
+  margin: 0 auto;
+  width: 1200px;
+}
+
+@media only screen and (max-width: 1260px) {
+  .container {
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 30px;
+    box-sizing: border-box;
   }
+}
 
 </style>

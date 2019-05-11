@@ -1,12 +1,12 @@
 <template>
-  <el-row>
-    <PostCarousel :posts="posts"/>
-  </el-row>
+  <div class="row">
+    <PostCard :post="post" v-for="post in  posts" v-bind:key="post.id"/>
+  </div>
 </template>
 
 <script>
 
-import PostCarousel from '@/components/PostCarousel.vue'
+import PostCard from '@/components/PostCard.vue'
 
 import GhostContentAPI from "@tryghost/content-api";
 
@@ -19,7 +19,7 @@ const api = new GhostContentAPI({
 export default {
   name: "latestNews",
   components: {
-    PostCarousel
+    PostCard
   },
   data() {
     return {
@@ -30,7 +30,7 @@ export default {
     loadData() {
       // fetch 5 posts, including related tags and authors
       api.posts
-        .browse({ limit: 5, include: "tags,authors", filter: 'tag:projekt-der-woche' })
+        .browse({ limit: 3, include: "tags,authors", filter: 'tag:projekt-der-woche' })
         .then(posts => {
           this.posts = posts;
         })
@@ -45,5 +45,16 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
+  .row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin: 30px -25px 0;
+  }
+  @media only screen and (max-width: 920px) {
+    .row {
+      flex-wrap: wrap;
+    }
+  }
 </style>

@@ -5,12 +5,14 @@
       <p class="sub-heading">Die Seite, die IOTA einfach erklärt!</p>
     </div>
     <div class="section news">
-      <div class="headline-wrapper">
-        <h2>Neuigkeiten</h2>
-        <router-link to="/news" tag="button" class="el-button el-button--primary">Alle Neuigkeiten</router-link>
+      <div class="container">
+        <div class="headline-wrapper">
+          <h2>Neuigkeiten</h2>
+          <router-link to="/news" tag="button" class="el-button el-button--primary">Alle Neuigkeiten</router-link>
+        </div>
+        <div class="divider"></div>
+        <LatestNews/>
       </div>
-      <div class="divider"></div>
-      <LatestNews/>
     </div>
     <div class="section section-background knowledge">
       <h2>Du bist neu bei IOTA?</h2>
@@ -22,16 +24,18 @@
       >Entdecke die Grundlagen</router-link>
     </div>
     <div class="section projects">
-      <div class="headline-wrapper">
-        <h2>Projekte der Woche</h2>
-        <router-link
-          to="/projects"
-          tag="button"
-          class="el-button el-button--primary"
-        >Entdecke mehr Projekte</router-link>
+      <div class="container">
+        <div class="headline-wrapper">
+          <h2>Projekte der Woche</h2>
+          <router-link
+            to="/projects"
+            tag="button"
+            class="el-button el-button--primary"
+          >Entdecke mehr Projekte</router-link>
+        </div>
+        <div class="divider"></div>
+        <LatestProjects/>
       </div>
-       <div class="divider"></div>
-      <LatestProjects/>
     </div>
 
     <div class="section section-background knowledge">
@@ -57,12 +61,18 @@
       >Github</a>
     </div>
     <div class="section tutorials">
-      <div class="headline-wrapper">
-        <h2>Tutorials</h2>
-              <router-link to="/tutorials" tag="button" class="el-button el-button--primary">Alle Projekte</router-link>
-      </div>
-      <div class="divider"></div>
-      <LatestTutorials/>
+      <div class="container">
+        <div class="headline-wrapper">
+          <h2>Tutorials</h2>
+          <router-link
+            to="/tutorials"
+            tag="button"
+            class="el-button el-button--primary"
+          >Alle Projekte</router-link>
+        </div>
+        <div class="divider"></div>
+        <LatestTutorials/>
+      </div>  
     </div>
   </div>
 </template>
@@ -84,7 +94,6 @@ export default {
 </script>
 
 <style lang="scss">
-
 .el-main {
   padding: 0px !important;
 }
@@ -97,8 +106,7 @@ export default {
   &-background {
     background-color: var(--gray);
     p {
-      margin: 40px auto;
-      width: 820px;
+      margin: 40px 10px;
     }
     a {
       text-decoration: none;
@@ -106,11 +114,18 @@ export default {
   }
 
   .headline-wrapper {
-    padding: 0 10px;
+    padding: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 }
-
+@media only screen and (max-width: 740px) {
+  .headline-wrapper {
+    flex-wrap: wrap;
+    h2 {
+      margin-bottom: 20px;
+    }
+  }
+}
 </style>
