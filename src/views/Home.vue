@@ -106,6 +106,7 @@ export default {
   }
 
   .headline-wrapper {
+    padding: 0 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;

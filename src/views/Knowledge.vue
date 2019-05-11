@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <div class="knowledge">
     <div class="hero">
       <h1 class="heading">Wissen wie IOTA funktioniert</h1>
       <p class="sub-heading">IOTA in einfacher Sprache erkärt.</p>
     </div>
-    <h2>Allgemeines</h2>
+    <h2 class="category_heading">Allgemeines</h2>
     <div class="divider"></div>
     <ul>
       <li
@@ -14,7 +14,7 @@
         class="page-link"
       >{{page.title}}</li>
     </ul>
-    <h2>Tangle</h2>
+    <h2 class="category_heading">Tangle</h2>
     <div class="divider"></div>
     <ul>
       <li
@@ -24,7 +24,7 @@
         class="page-link"
       >{{page.title}}</li>
     </ul>
-    <h2>Qubic</h2>
+    <h2 class="category_heading">Qubic</h2>
     <div class="divider"></div>
     <ul>
       <li
@@ -101,15 +101,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.category_heading {
+  padding: 50px 10px 0 10px;
+}
 .page-link {
   cursor: pointer;
   font-size: 1.5em;
   &:hover {
     color: var(--secondary-2);
   }
-}
-h2 {
-  padding-top: 50px;
-  padding-botto: 50px;
 }
 </style>
