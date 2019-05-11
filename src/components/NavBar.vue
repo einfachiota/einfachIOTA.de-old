@@ -1,6 +1,5 @@
 <template>
-  <nav v-bind:class="{ open: navStateOpen }"  class="main-nav">
-
+  <nav v-bind:class="{ open: navStateOpen }" class="main-nav">
     <router-link to="/" class="nav-item nav-item--logo" exact-active-class="active">
       <img alt="einfachIOTA" class="logo" src="../assets/logo.svg">
     </router-link>
@@ -13,40 +12,32 @@
       </div>
     </div>
 
-    <div v-bind:class="{ open: navStateOpen }"  class="nav-menu">
+    <div v-bind:class="{ open: navStateOpen }" class="nav-menu">
       <router-link to="/news" class="nav-item" active-class="active">
-        <span>Neuigkeiten</span>
+        <span v-on:click="navStateOpen = false">Neuigkeiten</span>
       </router-link>
       <router-link to="/knowledge" class="nav-item" active-class="active">
-        <span>Wissen</span>
+        <span v-on:click="navStateOpen = false">Wissen</span>
       </router-link>
       <router-link to="/projects" class="nav-item" active-class="active">
-        <span>Projekte</span>
+        <span v-on:click="navStateOpen = false">Projekte</span>
       </router-link>
       <router-link to="/tutorials" class="nav-item" active-class="active">
-        <span>Tutorials</span>
+        <span v-on:click="navStateOpen = false">Tutorials</span>
       </router-link>
       <router-link to="/supporter" class="nav-item" active-class="active">
-        <span>Unterstützer</span>
+        <span v-on:click="navStateOpen = false">Unterstützer</span>
       </router-link>
     </div>
-
   </nav>
 </template>
 
 <script>
-import { mapGetters } from "vuex";
 export default {
   data() {
     return {
       navStateOpen: false
     };
-  },
-  computed: {
-    itemsInCart() {
-      let cart = this.$store.getters.cartProducts;
-      return cart.reduce((accum, item) => accum + item.quantity, 0);
-    }
   },
   methods: {
     toggleNav() {
