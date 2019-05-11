@@ -104,12 +104,6 @@ export default {
       text-decoration: none;
     }
   }
-  .divider {
-    height: 5px;
-    width: 100px;
-    background-color: var(--primary);
-    margin: 20px 0;
-  }
 
   .headline-wrapper {
     display: flex;

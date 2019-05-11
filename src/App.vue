@@ -107,4 +107,12 @@ p {
   }
 }
 
+
+  .divider {
+    height: 5px;
+    width: 100px;
+    background-color: var(--primary);
+    margin: 20px 0;
+  }
+
 </style>

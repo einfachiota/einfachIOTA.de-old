@@ -5,6 +5,7 @@
       <p class="sub-heading">IOTA in einfacher Sprache erkärt.</p>
     </div>
     <h2>Allgemeines</h2>
+    <div class="divider"></div>
     <ul>
       <li
         v-for="page in general_pages"
@@ -14,6 +15,7 @@
       >{{page.title}}</li>
     </ul>
     <h2>Tangle</h2>
+    <div class="divider"></div>
     <ul>
       <li
         v-for="page in tangle_pages"
@@ -23,6 +25,7 @@
       >{{page.title}}</li>
     </ul>
     <h2>Qubic</h2>
+    <div class="divider"></div>
     <ul>
       <li
         v-for="page in qubic_pages"
@@ -97,11 +100,16 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .page-link {
   cursor: pointer;
+  font-size: 1.5em;
   &:hover {
     color: var(--secondary-2);
   }
+}
+h2 {
+  padding-top: 50px;
+  padding-botto: 50px;
 }
 </style>
