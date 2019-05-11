@@ -1,10 +1,10 @@
 <template>
-    <div class="card">
+    <div class="card"  @click="openPost(post)">
         <div class="image-wrapper">
             <div class="image" v-bind:style="{ 'background-image': 'url(' + post.feature_image + ')' }"></div>
         </div>
         <div class="card-body">
-          <h3 @click="openPost(post)">{{post.title}}</h3>
+          <h3>{{post.title}}</h3>
           <p>{{ post.excerpt.substring(0,120) }}...</p>
           <span class="more">mehr lesen</span>
         </div>
