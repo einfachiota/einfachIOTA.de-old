@@ -39,7 +39,6 @@
 
 <script>
 import GhostContentAPI from "@tryghost/content-api";
-import PostCarousel from "@/components/PostCarousel.vue";
 
 const api = new GhostContentAPI({
   url: "https://www.einfachiota.de",
@@ -50,7 +49,7 @@ const api = new GhostContentAPI({
 export default {
   name: "post",
   params: ["slug"],
-  components: { PostCarousel },
+  components: {  },
   data() {
     return {
       general_pages: [],
