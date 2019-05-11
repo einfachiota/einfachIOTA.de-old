@@ -37,21 +37,21 @@
           href="https://twitter.com/einfachIOTA"
           target="_blank"
           tag="button"
-          class="el-button el-button--primary"
+          class="btn-social el-button el-button--primary"
           style="margin: 0"
         >Twitter</a>
         <a
           href="https://discord.gg/rV3TMSU"
           target="_blank"
           tag="button"
-          class="el-button el-button--primary"
+          class="btn-social el-button el-button--primary"
           style="margin: 0 30px 0 30px"
         >Discord</a>
         <a
           href="https://github.com/einfachiota"
           target="_blank"
           tag="button"
-          class="el-button el-button--primary"
+          class="btn-social el-button el-button--primary"
           style="margin: 0"
         >Github</a>
       </div>
@@ -125,7 +125,9 @@ export default {
 .home {
   text-align: center;
 }
-
+.hero {
+  margin: 0 10px;
+}
 .section {
   padding: 80px 0;
   &-background {
@@ -153,5 +155,9 @@ export default {
       margin-bottom: 20px;
     }
   }
+  .btn-social  {
+      margin-bottom: 5px !important;
+  }
 }
+
 </style>

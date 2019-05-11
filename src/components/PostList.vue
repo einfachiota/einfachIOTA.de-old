@@ -68,4 +68,15 @@ export default {
   justify-content: center;
 }
 
+
+   @media only screen and (max-width: 740px)  {
+       .card {
+           margin-bottom: 50px;
+           width: 100%;
+           .image-wrapper {
+               height: 2s50px;
+           }
+       }
+   }
+
 </style>
