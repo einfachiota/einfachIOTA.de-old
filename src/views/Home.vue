@@ -91,13 +91,6 @@ export default {
 .home {
   text-align: center;
 }
-.hero {
-  padding-top: 120px;
-  .sub-heading {
-    margin-top: 0px;
-    font-size: 2.5em;
-  }
-}
 
 .section {
   padding: 80px 0;

@@ -1,6 +1,9 @@
 <template>
   <div class="news">
-    <h1>Neuigkeiten von der IOTA Foundation</h1>
+    <div class="hero">
+      <h1 class="heading">Neuigkeiten von der IOTA Foundation</h1>
+      <p class="sub-heading">Mit uns immer auf dem neusten Stand.</p>
+    </div>
     <PostList
       :posts="posts"
       :per_page="per_page"

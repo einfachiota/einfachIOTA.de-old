@@ -97,4 +97,14 @@ p {
     border: none !important;
 }
 
+
+.hero {
+  text-align: center;
+  padding-top: 120px;
+  .sub-heading {
+    margin-top: 0px;
+    font-size: 2.5em;
+  }
+}
+
 </style>

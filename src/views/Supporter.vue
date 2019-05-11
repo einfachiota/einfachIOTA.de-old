@@ -1,7 +1,9 @@
 <template>
   <div class="supporter">
-    <h1>Unsere Unterstützer</h1>
-    <p>Dank Euch können wir unsere Server bezahlen, danke!</p>
+    <div class="hero">
+      <h1 class="heading">Unsere Unterstützer</h1>
+      <p class="sub-heading">Dank Euch können wir unsere Server bezahlen, danke!</p>
+    </div>
     <el-row :gutter="12">
       <el-col v-for="transaction in transactions" v-bind:key="transaction.hash" :span="12">
         <el-card shadow="hover">

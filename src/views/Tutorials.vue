@@ -1,6 +1,9 @@
 <template>
   <div class="tutorials">
-    <h1>Tutorials</h1>
+    <div class="hero">
+      <h1 class="heading">Tutorials</h1>
+      <p class="sub-heading">Einfache Übungen zum nachmachen.</p>
+    </div>
     <PostList
       :posts="posts"
       :per_page="per_page"

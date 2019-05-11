@@ -1,6 +1,9 @@
 <template>
   <div>
-    <h1>Wissen wie IOTA funktioniert</h1>
+    <div class="hero">
+      <h1 class="heading">Wissen wie IOTA funktioniert</h1>
+      <p class="sub-heading">IOTA in einfacher Sprache erkärt.</p>
+    </div>
     <h2>Allgemeines</h2>
     <ul>
       <li

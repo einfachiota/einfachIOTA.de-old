@@ -1,6 +1,9 @@
 <template>
   <div class="projects">
-    <h1>Projekte der Woche</h1>
+    <div class="hero">
+      <h1 class="heading">Projekte der Woche</h1>
+      <p class="sub-heading">Tolle Projekte aus dem IOTA Ecosystem.</p>
+    </div>
     <PostList
       :posts="posts"
       :per_page="per_page"
