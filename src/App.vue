@@ -109,6 +109,16 @@ button.el-button.el-button--light {
   }
 }
 
+.el-pagination.is-background .btn-next, .el-pagination.is-background .btn-prev, .el-pagination.is-background .el-pager li {
+  &:hover {
+    color: var(--primary) !important;
+  }
+}
+
+.el-pagination.is-background .el-pager li:not(.disabled).active {
+  background-color: var(--primary) !important;
+}
+
 .hero {
   text-align: center;
   padding-top: 120px;
