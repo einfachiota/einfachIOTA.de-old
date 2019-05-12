@@ -75,7 +75,7 @@
     <div class="section section-background knowledge">
       <div class="container">
         <h2>Werde Unterstützer</h2>
-        <p>Wenn dir gefällt was wir tun, kannst du uns auf zweierlei Arten unterstützen. Du kannst unserer Community beitreten und uns bei Aufgaben und Projekten unter die Arme greifen, oder du kannst uns ein paar IOTA schicken..</p>
+        <p>Wenn dir gefällt was wir tun, kannst du uns auf zweierlei Arten unterstützen. Du kannst unserer Community beitreten und uns bei Aufgaben und Projekten unter die Arme greifen, oder du kannst uns ein paar IOTA schicken.</p>
         <router-link
             to="/supporter"
             tag="button"
