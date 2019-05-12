@@ -1,7 +1,15 @@
 <template>
   <div>
-    <h1>{{post.title}}</h1>
-    <span v-html="post.html"></span>
+    <div class="header">
+      <h1 class="header__title">{{post.title}}</h1>
+      <div class="divider"></div>
+      <div class="image-wrapper">
+        <div class="image" v-bind:style="{ 'background-image': 'url(' + post.feature_image + ')' }"></div>
+      </div>
+    </div>
+    <div class="content">
+      <span v-html="post.html"></span>
+    </div>
   </div>
 </template>
 
@@ -18,16 +26,16 @@ export default {
   name: "post",
   params: ["slug"],
   data() {
-    return{
-        post: {}
-    } 
+    return {
+      post: {}
+    };
   },
   methods: {
     fetchPost() {
       api.posts
         .read({ slug: this.$route.params.slug })
         .then(post => {
-            this.post = post;
+          this.post = post;
         })
         .catch(err => {
           console.error(err);
@@ -35,10 +43,49 @@ export default {
     }
   },
   created() {
-      this.fetchPost()
+    this.fetchPost();
   }
 };
 </script>
 
-<style>
+<style lang="scss">
+.header {
+  text-align: center;
+  &__title {
+    margin: 60px 40px 20px 40px;
+  }
+  .divider {
+    margin: 0 auto;
+  }
+  .image-wrapper {
+    margin: 20px auto;
+    height: 480px;
+    width: 100%;
+    max-width: 1080px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    .image {
+      height: inherit;
+      width: inherit;
+      background-size: cover;
+      background-position: center center;
+      transition: all 300ms ease-in-out;
+    }
+  }
+}
+
+.content {
+  margin: auto auto;
+  padding: 0 10%;
+  max-width: 860px;
+
+  img.kg-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-size: cover;
+  }
+}
 </style>
+

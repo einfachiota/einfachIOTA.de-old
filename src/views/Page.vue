@@ -1,7 +1,12 @@
 <template>
   <div>
-    <h1>{{page.title}}</h1>
-    <span v-html="page.html"></span>
+    <div class="header">
+      <h1 class="header__title">{{page.title}}</h1>
+      <div class="divider"></div>
+    </div>
+    <div class="content">
+      <span v-html="page.html"></span>
+    </div>
   </div>
 </template>
 
@@ -40,5 +45,28 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+.header {
+  text-align: center;
+  &__title {
+    margin: 60px 40px 20px 40px;
+  }
+  .divider {
+    margin: 0 auto;
+  }
+}
+
+.content {
+  margin: auto auto;
+  padding: 0 10%;
+  max-width: 860px;
+
+  img.kg-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-size: cover;
+  }
+}
 </style>
