@@ -147,6 +147,24 @@ button.el-button.el-button--light {
     padding: 0 30px;
     box-sizing: border-box;
   }
+  h1 {
+  font-size: 42px;
+  line-height: 1.25;
+  }
+  h2 {
+    font-size: 32px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
 }
 
 </style>
