@@ -1,19 +1,30 @@
 <template>
   <div class="supporter">
     <div class="hero">
-      <h1 class="heading">Unsere Unterstützer</h1>
-      <p class="sub-heading">Dank Euch können wir unsere Server bezahlen, danke!</p>
+      <div class="container">
+        <h1 class="heading">Unsere Unterstützer</h1>
+        <div class="divider"></div>
+        <p class="sub-heading">Dank Euch können wir unsere Server bezahlen, danke!</p>
+      </div>
     </div>
-    <el-row :gutter="12">
-      <el-col v-for="transaction in transactions" v-bind:key="transaction.hash" :span="12">
-        <el-card shadow="hover">
-          <div slot="header" class="clearfix">
-            <span>{{transaction.value}} IOTA</span>
-            <a :href="'https://thetangle.org/transaction/'+ transaction.hash" target="_blank" style="float: right; padding: 3px 0" type="text">TheTangle.org</a>
-          </div>
-          {{getMessage(transaction.signatureMessageFragment)}}</el-card>
-      </el-col>
-    </el-row>
+    <div class="container">
+      <el-row :gutter="12">
+        <el-col v-for="transaction in transactions" v-bind:key="transaction.hash" :span="12">
+          <el-card shadow="hover">
+            <div slot="header" class="clearfix">
+              <span>{{transaction.value}} IOTA</span>
+              <a
+                :href="'https://thetangle.org/transaction/'+ transaction.hash"
+                target="_blank"
+                style="float: right; padding: 3px 0"
+                type="text"
+              >TheTangle.org</a>
+            </div>
+            {{getMessage(transaction.signatureMessageFragment)}}
+          </el-card>
+        </el-col>
+      </el-row>
+    </div>
   </div>
 </template>
 
@@ -74,8 +85,28 @@ export default {
         this.balances = balances;
       })
       .catch(err => {
-        console.log("Error fetching balances: ", err)
+        console.log("Error fetching balances: ", err);
       });
   }
 };
 </script>
+
+
+<style lang="scss" scoped>
+.heading {
+  text-align: left !important;
+}
+.sub-heading {
+  text-align: left !important;
+}
+
+.container {
+  margin-bottom: 50px;
+  a {
+    color: var(--primary);
+    &:hover {
+      color: var(--primary--darken);
+    }
+  }
+}
+</style>
