@@ -1,39 +1,44 @@
 <template>
   <div class="knowledge">
     <div class="hero">
-      <h1 class="heading">Wissen wie IOTA funktioniert</h1>
-      <p class="sub-heading">IOTA in einfacher Sprache erkärt.</p>
+      <div class="container">
+        <h1 class="heading">Wissen wie IOTA funktioniert</h1>
+        <div class="divider"></div>
+        <p class="sub-heading">IOTA in einfacher Sprache erkärt.</p>
+      </div>
     </div>
-    <h2 class="category_heading">Allgemeines</h2>
-    <div class="divider"></div>
-    <ul>
-      <li
-        v-for="page in general_pages"
-        v-bind:key="page.id"
-        @click="openPage(page)"
-        class="page-link"
-      >{{page.title}}</li>
-    </ul>
-    <h2 class="category_heading">Tangle</h2>
-    <div class="divider"></div>
-    <ul>
-      <li
-        v-for="page in tangle_pages"
-        v-bind:key="page.id"
-        @click="openPage(page)"
-        class="page-link"
-      >{{page.title}}</li>
-    </ul>
-    <h2 class="category_heading">Qubic</h2>
-    <div class="divider"></div>
-    <ul>
-      <li
-        v-for="page in qubic_pages"
-        v-bind:key="page.id"
-        @click="openPage(page)"
-        class="page-link"
-      >{{page.title}}</li>
-    </ul>
+    <div class="container">
+      <h2 class="category_heading">Allgemeines</h2>
+      <div class="divider"></div>
+      <ul>
+        <li
+          v-for="page in general_pages"
+          v-bind:key="page.id"
+          @click="openPage(page)"
+          class="page-link"
+        >{{page.title}}</li>
+      </ul>
+      <h2 class="category_heading">Tangle</h2>
+      <div class="divider"></div>
+      <ul>
+        <li
+          v-for="page in tangle_pages"
+          v-bind:key="page.id"
+          @click="openPage(page)"
+          class="page-link"
+        >{{page.title}}</li>
+      </ul>
+      <h2 class="category_heading">Qubic</h2>
+      <div class="divider"></div>
+      <ul>
+        <li
+          v-for="page in qubic_pages"
+          v-bind:key="page.id"
+          @click="openPage(page)"
+          class="page-link"
+        >{{page.title}}</li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -49,7 +54,7 @@ const api = new GhostContentAPI({
 export default {
   name: "post",
   params: ["slug"],
-  components: {  },
+  components: {},
   data() {
     return {
       general_pages: [],
@@ -100,15 +105,26 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-.category_heading {
-  padding: 50px 10px 0 10px;
+.heading {
+  text-align: left !important;
 }
-.page-link {
-  cursor: pointer;
-  font-size: 1.5em;
-  &:hover {
-    color: var(--secondary-2);
+.sub-heading {
+  text-align: left !important;
+}
+
+.container {
+  margin-bottom: 50px;
+
+  .category_heading {
+    padding: 50px 10px 0 10px;
+  }
+
+  .page-link {
+    cursor: pointer;
+    font-size: 1.5em;
+    &:hover {
+      color: var(--secondary-2);
+    }
   }
 }
 </style>
