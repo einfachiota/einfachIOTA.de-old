@@ -4,14 +4,13 @@
       <h1 class="header__title">{{page.title}}</h1>
       <div class="divider"></div>
     </div>
-    <div class="content">
-      <span v-html="page.html"></span>
-    </div>
+    <Content :content="page.html" />
   </div>
 </template>
 
 <script>
 import GhostContentAPI from "@tryghost/content-api";
+import Content from "@/components/Content";
 
 const api = new GhostContentAPI({
   url: "https://www.einfachiota.de",
@@ -22,6 +21,7 @@ const api = new GhostContentAPI({
 export default {
   name: "page",
   params: ["slug"],
+  components: { Content },
   data() {
     return{
         page: {}

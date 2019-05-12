@@ -7,14 +7,13 @@
         <div class="image" v-bind:style="{ 'background-image': 'url(' + post.feature_image + ')' }"></div>
       </div>
     </div>
-    <div class="content">
-      <span v-html="post.html"></span>
-    </div>
+    <Content :content="post.html" />
   </div>
 </template>
 
 <script>
 import GhostContentAPI from "@tryghost/content-api";
+import Content from "@/components/Content";
 
 const api = new GhostContentAPI({
   url: "https://www.einfachiota.de",
@@ -25,6 +24,7 @@ const api = new GhostContentAPI({
 export default {
   name: "post",
   params: ["slug"],
+  components: { Content },
   data() {
     return {
       post: {}
@@ -74,18 +74,5 @@ export default {
   }
 }
 
-.content {
-  margin: auto auto;
-  padding: 0 10%;
-  max-width: 860px;
-
-  img.kg-image {
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-position: center center;
-    background-size: cover;
-  }
-}
 </style>
 
