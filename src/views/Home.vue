@@ -75,7 +75,7 @@
     <div class="section section-background knowledge">
       <div class="container">
         <h2>Werde Unterstützer</h2>
-        <p>Wenn dir gefällt was wir tun, kannst du uns auf zweierlei Arten unterstützen. Du kannst unserer Community beitreten und uns bei Aufgaben und Projekten unter die Arme greifen, oder du kannst uns mit einer Geldspende helfen.</p>
+        <p>Wenn dir gefällt was wir tun, kannst du uns auf zweierlei Arten unterstützen. Du kannst unserer Community beitreten und uns bei Aufgaben und Projekten unter die Arme greifen, oder du kannst uns ein paar IOTA schicken..</p>
         <router-link
             to="/supporter"
             tag="button"
@@ -149,6 +149,9 @@ export default {
   }
 }
 @media only screen and (max-width: 740px) {
+  .hero {
+      padding-top: 40px;
+  }
   .headline-wrapper {
     flex-wrap: wrap;
     h2 {
