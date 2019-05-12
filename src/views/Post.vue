@@ -59,7 +59,7 @@ export default {
   }
   .image-wrapper {
     margin: 20px auto;
-    height: 480px;
+    height: 550px;
     width: 100%;
     max-width: 1080px;
     overflow: hidden;
