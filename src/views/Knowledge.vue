@@ -111,16 +111,19 @@ export default {
 .sub-heading {
   text-align: left !important;
 }
-
+.knowledge {
+  padding-bottom: 100px;
+}
 .container {
   margin-bottom: 50px;
 
   .category_heading {
-    padding: 50px 10px 0 10px;
+    padding: 50px 10px 0 0;
   }
 
   .page-link {
     cursor: pointer;
+    margin-bottom: 10px;
     font-size: 1.5em;
     &:hover {
       color: var(--secondary-2);

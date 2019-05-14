@@ -13,20 +13,20 @@
     </div>
 
     <div v-bind:class="{ open: navStateOpen }" class="nav-menu">
-      <router-link to="/news" class="nav-item" active-class="active">
-        <span v-on:click="navStateOpen = false">Neuigkeiten</span>
+      <router-link v-on:click.native="navStateOpen = false" to="/news" class="nav-item" active-class="active">
+        <span >Neuigkeiten</span>
       </router-link>
-      <router-link to="/knowledge" class="nav-item" active-class="active">
-        <span v-on:click="navStateOpen = false">Wissen</span>
+      <router-link v-on:click.native="navStateOpen = false"  to="/knowledge" class="nav-item" active-class="active">
+        <span>Wissen</span>
       </router-link>
-      <router-link to="/projects" class="nav-item" active-class="active">
-        <span v-on:click="navStateOpen = false">Projekte</span>
+      <router-link v-on:click.native="navStateOpen = false"  to="/projects" class="nav-item" active-class="active">
+        <span>Projekte</span>
       </router-link>
-      <router-link to="/tutorials" class="nav-item" active-class="active">
-        <span v-on:click="navStateOpen = false">Tutorials</span>
+      <router-link v-on:click.native="navStateOpen = false"  to="/tutorials" class="nav-item" active-class="active">
+        <span>Tutorials</span>
       </router-link>
-      <router-link to="/supporter" class="nav-item" active-class="active">
-        <span v-on:click="navStateOpen = false">Unterstützer</span>
+      <router-link v-on:click.native="navStateOpen = false"  to="/supporter" class="nav-item" active-class="active">
+        <span>Unterstützer</span>
       </router-link>
     </div>
   </nav>
@@ -116,6 +116,7 @@ export default {
       &:before {
         content: "";
         position: absolute;
+        top: -5px;
         bottom: -5px;
         height: 10px;
         width: 50px;
@@ -160,7 +161,7 @@ export default {
       display: flex;
       justify-content: center;
       align-items: center;
-      transition: var(--transition-300);
+      transition: all 300ms ease-in-out;
       .menu-btn {
         position: relative;
         height: 29px;
@@ -168,14 +169,14 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
-        transition: var(--transition-300_cubic);
+        transition: all 300ms ease-in-out;
         span {
           position: absolute;
           height: 3px;
           width: 100%;
           background-color: var(--dark);
           border-radius: var(--border-radius-sm);
-          transition: var(--transition-300_cubic);
+          transition: all 300ms ease-in-out;
         }
         .top {
           top: 5px;
@@ -239,6 +240,7 @@ export default {
           bottom: auto;
           width: 10px;
           height: 50px;
+          top: 25px;
         }
       }
       &.open {

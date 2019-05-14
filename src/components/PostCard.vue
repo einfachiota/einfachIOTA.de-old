@@ -27,7 +27,7 @@ export default {
     .card {
         height: auto;
         width: 100%;
-        margin: 0 25px;
+        margin: 0 25px 50px;
         border-radius: 10px;
         overflow: hidden;
         padding-bottom: 30px;
