@@ -4,26 +4,12 @@
       <div class="container">
         <h1 class="heading">Unsere Unterstützer</h1>
         <div class="divider"></div>
-        <p class="sub-heading">Dank Euch können wir unsere Server bezahlen, danke!</p>
+        <p class="sub-heading">Dank Euch können wir unsere Server bezahlen - Danke!</p>
       </div>
     </div>
     <div class="container">
-      <el-row :gutter="12">
-        <el-col v-for="transaction in transactions" v-bind:key="transaction.hash" :span="12">
-          <el-card shadow="hover">
-            <div slot="header" class="clearfix">
-              <span>{{transaction.value}} IOTA</span>
-              <a
-                :href="'https://thetangle.org/transaction/'+ transaction.hash"
-                target="_blank"
-                style="float: right; padding: 3px 0"
-                type="text"
-              >TheTangle.org</a>
-            </div>
-            {{getMessage(transaction.signatureMessageFragment)}}
-          </el-card>
-        </el-col>
-      </el-row>
+      <VueQrcode value="IKTYKKCZFZZECSFIJYWYSUUTXCIBNIFPFSPGUIUUAYONDYUSHEZVQBNPDYUTDMTNTHBLABCYYLZKLGIVCINGBALQVX" :options="{ width: 200 }"></VueQrcode>
+    </div>
       <div class="hero">
         <div class="container">
           <h1 class="heading">Unsere Freunde</h1>
@@ -31,6 +17,8 @@
           <p class="sub-heading">Ohne Euch gäbe es kein Projekt der Woche, danke!</p>
         </div>
       </div>
+    <div class="container">
+
       <p>Wir von einfachIOTA betrachten die IOTA Community als eine Art große Familie die zusammen hält und sich gegenseitig unterstützt. Daher berichten wir jede Woche über ein neues, oder auch ein bereits bekanntes Projekt aus dem IOTA Ökosystem. Wir hoffen es dadurch ein bisschen bekannter zu machen und freuen uns, wenn wir die Personen hinter den Projekten besser kennen lernen. Und wie es sich bei Freunden und Verwandten so gehört, wollen wir natürlich immer sofort sehen wie es ihnen aktuell ergeht und was sie so treiben. Wir hoffen, dass hier in Zukunft noch viele weitere Freunde und Verwandte hinzu kommen! 🤗</p>
       <table class="el-table hover">
         <tr>
@@ -395,7 +383,7 @@
         </tr>
       </table>
         <div class="divider"></div>
-      <p>Kennst auch du ein Projekt, dass für die IOTA Community interessant sein könnte und von uns erklärt werden sollte? Dann komm doch einfach mal zu uns auf den Discord Server vorbei https://discordapp.com/invite/2FP9uHx und melde dich bei huhn#8246! Danke!</p>
+      <p>Kennst auch du ein Projekt, dass für die IOTA Community interessant ist und von uns erklärt werden soll? Dann komm doch einfach mal zu uns auf den Discord Server vorbei https://discordapp.com/invite/2FP9uHx und melde dich bei huhn#8246! Danke!</p>
     </div>
   </div>
 </template>
@@ -403,6 +391,7 @@
 <script>
 import { composeAPI } from "@iota/core";
 const converter = require("@iota/converter");
+import VueQrcode from '@chenfengyuan/vue-qrcode';
 
 const iota = composeAPI({
   provider: "https://nutzdoch.einfachiota.de"
@@ -415,6 +404,7 @@ export default {
       balances: 0
     };
   },
+  components: {VueQrcode},
   methods: {
     getMessage(trytes) {
       return converter.trytesToAscii(trytes + "9");

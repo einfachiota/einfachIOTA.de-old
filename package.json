@@ -8,6 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@chenfengyuan/vue-qrcode": "^1.0.0",
     "@iota/converter": "^1.0.0-beta.12",
     "@iota/core": "^1.0.0-beta.12",
     "@tryghost/content-api": "^1.2.1",
