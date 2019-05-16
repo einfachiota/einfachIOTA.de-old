@@ -359,23 +359,6 @@
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://wiki.einfachiota.de/"
-            >einfachIOTA Wiki</a>
-          </td>
-          <td>Deutsche Übersetzung des IOTA Developer Doc. Portals</td>
-          <td>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.einfachiota.de/projekt-der-woche-einfachiota-wiki/"
-            >Link</a>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
               href="http://coordinator.iotawatch.it/"
             >IOTA Coordinator Monitor</a>
           </td>
@@ -410,7 +393,7 @@
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://www.helliota.com/"
+              href="https://www.helloiota.com/"
             >Hello IOTA</a>
           </td>
           <td>Webseite mit interessanten Artikeln und einem Forum.</td>
@@ -424,7 +407,7 @@
         </tr>
       </table>
         <div class="divider"></div>
-      <p>Kennst auch du ein Projekt, dass für die IOTA Community interessant ist und von uns erklärt werden soll? Dann komm doch einfach mal zu uns auf den Discord Server vorbei https://discordapp.com/invite/2FP9uHx und melde dich bei huhn#8246! Danke!</p>
+      <p>Kennst auch du ein Projekt, dass für die IOTA Community interessant ist und von uns erklärt werden soll? Dann komm doch einfach mal zu uns auf den Discord Server vorbei <a target="_blank" rel="noopener noreferrer" href="https://discordapp.com/invite/2FP9uHx">https://discordapp.com/invite/2FP9uHx</a> und melde dich bei huhn#8246! Danke!</p>
     </div>
   </div>
 </template>
