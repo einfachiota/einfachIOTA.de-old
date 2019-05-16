@@ -5,22 +5,29 @@
         <router-link to="/" class="footer-logo" exact-active-class="active">
           <img alt="einfachIOTA" class="logo" src="../assets/logo.svg">
         </router-link>
-        <p>Unsere Aufgabe ist es, IOTA einfach zu erklären. All unser Content ist kostenlos zugänglich und darf frei wiederverwendet werden.</p>
+        <p>IOTA einfach erklärt.</p>
+        <p>Unsere Aufgabe ist es, deutschsprachigen Inhalt rund um IOTA bereitzustellen und IOTA in einfacher Sprache zu erklären.</p>
       </div>
       <div class="footer-main">
         <h4>Mehr</h4>
         <div class="divider"></div>
-        
 
         <router-link to="news" class="footer-main-link">Neuigkeiten</router-link>
+        <router-link to="knowledge" class="footer-main-link">Wissen</router-link>
         <router-link to="projects" class="footer-main-link">Projekte</router-link>
+        <router-link to="tutorials" class="footer-main-link">Tutorials</router-link>
+        <router-link to="supporter" class="footer-main-link">Unterstützer</router-link>
         <a href="https://pool.einfachIOTA.de" class="footer-main-link">Pool</a>
       </div>
       <div class="footer-main">
         <h4>Partner</h4>
         <div class="divider"></div>
         <a href="https://powsrv.io/" target="_blank" class="footer-main-link">powsrv.io</a>
-        <a href="https://tanglebay.org/forum/" target="_blank" class="footer-main-link">Tanglebay.org</a>
+        <a
+          href="https://tanglebay.org/forum/"
+          target="_blank"
+          class="footer-main-link"
+        >Tanglebay.org</a>
       </div>
       <div class="footer-main">
         <h4>IOTA</h4>
@@ -31,9 +38,7 @@
       </div>
     </div>
     <div class="row footer-bottom">
-      <div class="footer-bottom-col">
-        © einfachIOTA - All rights reserved
-      </div>
+      <div class="footer-bottom-col">© einfachIOTA</div>
       <div class="footer-bottom-col">
         <a href="https://discord.gg/WdfXseU" target="_blank" class="footer-main-link">Discord</a>
         <a href="https://twitter.com/einfachIOTA" target="_blank" class="footer-main-link">Twitter</a>
@@ -93,25 +98,25 @@
       }
     }
   }
-  
+
   .footer-bottom {
     padding: 15px 50px;
     margin: 0 -50px;
-    border-top: 0.5px solid rgba(0,0,0,.25);
-    color: rgba(0,0,0,.75);
+    border-top: 0.5px solid rgba(0, 0, 0, 0.25);
+    color: rgba(0, 0, 0, 0.75);
     .footer-bottom-col {
       .footer-main-link {
         margin: 0 10px;
         &:first-child {
           margin-left: 0;
         }
-        &:last-child {  
+        &:last-child {
           margin-right: 0;
         }
       }
     }
     .footer-main-link {
-      color: rgba(0,0,0,.75);
+      color: rgba(0, 0, 0, 0.75);
       text-decoration: none;
       transition: color 200ms ease-in-out;
       &:hover {
@@ -120,7 +125,7 @@
     }
   }
 }
-@media only screen and (max-width: 992px) { 
+@media only screen and (max-width: 992px) {
   .footer {
     .row {
       flex-wrap: wrap;
@@ -128,7 +133,7 @@
         width: calc(50% - 50px);
         &:nth-child(even) {
           margin-right: 0;
-        } 
+        }
       }
     }
     .row.footer-bottom {
@@ -149,7 +154,7 @@
     }
   }
 }
-@media only screen and (max-width: 624px) { 
+@media only screen and (max-width: 624px) {
   .footer {
     .row {
       flex-wrap: wrap;
