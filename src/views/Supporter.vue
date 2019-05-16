@@ -31,6 +31,7 @@
           <p class="sub-heading">Ohne Euch gäbe es kein Projekt der Woche, danke!</p>
         </div>
       </div>
+      <p>Wir von einfachIOTA betrachten die IOTA Community als eine Art große Familie die zusammen hält und sich gegenseitig unterstützt. Daher berichten wir jede Woche über ein neues, oder auch ein bereits bekanntes Projekt aus dem IOTA Ökosystem. Wir hoffen es dadurch ein bisschen bekannter zu machen und freuen uns, wenn wir die Personen hinter den Projekten besser kennen lernen. Und wie es sich bei Freunden und Verwandten so gehört, wollen wir natürlich immer sofort sehen wie es ihnen aktuell ergeht und was sie so treiben. Wir hoffen, dass hier in Zukunft noch viele weitere Freunde und Verwandte hinzu kommen! 🤗</p>
       <table class="el-table hover">
         <tr>
           <th>Name/Webseite</th>
