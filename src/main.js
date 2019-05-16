@@ -3,6 +3,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import './registerServiceWorker'
+import VueClipboard from 'vue-clipboard2'
 
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
@@ -10,6 +11,10 @@ import 'element-ui/lib/theme-chalk/index.css';
 Vue.config.productionTip = false
 
 Vue.use(ElementUI);
+
+
+VueClipboard.config.autoSetContainer = true // add this line
+Vue.use(VueClipboard)
 
 new Vue({
   router,

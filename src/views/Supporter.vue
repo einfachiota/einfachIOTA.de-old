@@ -8,7 +8,14 @@
       </div>
     </div>
     <div class="container">
-      <VueQrcode value="IKTYKKCZFZZECSFIJYWYSUUTXCIBNIFPFSPGUIUUAYONDYUSHEZVQBNPDYUTDMTNTHBLABCYYLZKLGIVCINGBALQVX" :options="{ width: 200 }"></VueQrcode>
+      <div class="address">
+        <h3>Unsere Spendenadresse:</h3>
+        <VueQrcode :value="address" :options="{ width: 200 }"></VueQrcode>
+        <p>{{address}}</p>
+        <button type="button" class="el-button el-button--primary"
+          v-clipboard:copy="address">Adresse kopieren!</button>
+      </div>
+     
     </div>
       <div class="hero">
         <div class="container">
@@ -400,6 +407,7 @@ const iota = composeAPI({
 export default {
   data() {
     return {
+      address: 'IKTYKKCZFZZECSFIJYWYSUUTXCIBNIFPFSPGUIUUAYONDYUSHEZVQBNPDYUTDMTNTHBLABCYYLZKLGIVCINGBALQVX',
       transactions: [],
       balances: 0
     };
@@ -464,6 +472,13 @@ export default {
 
 .container {
   margin-bottom: 50px;
+
+  .address {
+    text-align: center;
+    p {
+        word-break: break-word;
+    }
+  }
   a {
     color: var(--primary);
     &:hover {
