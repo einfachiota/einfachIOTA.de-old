@@ -388,6 +388,40 @@
             >Link</a>
           </td>
         </tr>
+        <tr>
+          <td>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.thingslab.technology/"
+            >ProductID</a>
+          </td>
+          <td>Der digitale Zwillinge für Produkte</td>
+          <td>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.einfachiota.de/projekt-der-woche-productid/"
+            >Link</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.helliota.com/"
+            >Hello IOTA</a>
+          </td>
+          <td>Webseite mit interessanten Artikeln und einem Forum.</td>
+          <td>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.einfachiota.de/projekt-der-woche-hello-iota/"
+            >Link</a>
+          </td>
+        </tr>
       </table>
         <div class="divider"></div>
       <p>Kennst auch du ein Projekt, dass für die IOTA Community interessant ist und von uns erklärt werden soll? Dann komm doch einfach mal zu uns auf den Discord Server vorbei https://discordapp.com/invite/2FP9uHx und melde dich bei huhn#8246! Danke!</p>
