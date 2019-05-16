@@ -117,6 +117,9 @@ button.el-button.el-button--light {
 
 .el-pagination.is-background .el-pager li:not(.disabled).active {
   background-color: var(--primary) !important;
+  &:hover {
+    color: var(--white) !important;
+  }
 }
 
 .hero {
