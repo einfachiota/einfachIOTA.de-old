@@ -12,21 +12,26 @@
         <h3>Unsere Spendenadresse:</h3>
         <VueQrcode :value="address" :options="{ width: 200 }"></VueQrcode>
         <p>{{address}}</p>
-        <button type="button" class="el-button el-button--primary"
-          v-clipboard:copy="address">Adresse kopieren!</button>
+        <button
+          type="button"
+          class="el-button el-button--primary"
+          v-clipboard:copy="address"
+        >Adresse kopieren!</button>
       </div>
-     
     </div>
-      <div class="hero">
-        <div class="container">
-          <h1 class="heading">Unsere Freunde</h1>
-          <div class="divider"></div>
-          <p class="sub-heading">Ohne Euch gäbe es kein Projekt der Woche, danke!</p>
-        </div>
+    <div class="hero">
+      <div class="container">
+        <h1 class="heading">Unsere Freunde</h1>
+        <div class="divider"></div>
+        <p class="sub-heading">Ohne Euch gäbe es kein Projekt der Woche - Danke!</p>
       </div>
+    </div>
     <div class="container">
-
-      <p>Wir von einfachIOTA betrachten die IOTA Community als eine Art große Familie die zusammen hält und sich gegenseitig unterstützt. Daher berichten wir jede Woche über ein neues, oder auch ein bereits bekanntes Projekt aus dem IOTA Ökosystem. Wir hoffen es dadurch ein bisschen bekannter zu machen und freuen uns, wenn wir die Personen hinter den Projekten besser kennen lernen. Und wie es sich bei Freunden und Verwandten so gehört, wollen wir natürlich immer sofort sehen wie es ihnen aktuell ergeht und was sie so treiben. Wir hoffen, dass hier in Zukunft noch viele weitere Freunde und Verwandte hinzu kommen! 🤗</p>
+      <p>Wir von einfachIOTA betrachten die IOTA Community als eine Art große Familie die zusammen hält und sich gegenseitig unterstützt. 
+        Daher berichten wir jede Woche über ein neues, oder auch ein bereits bekanntes Projekt aus dem IOTA Ökosystem.
+        Wir hoffen es dadurch ein bisschen bekannter zu machen und freuen uns, wenn wir die Personen hinter den Projekten besser kennen lernen. 
+        Und wie es sich bei Freunden und Verwandten so gehört, wollen wir natürlich immer sofort sehen wie es ihnen aktuell ergeht und was sie so treiben. 
+        Wir hoffen, dass hier in Zukunft noch viele weitere Freunde und Verwandte hinzu kommen! 🤗</p>
       <table class="el-table hover">
         <tr>
           <th>Name/Webseite</th>
@@ -406,8 +411,15 @@
           </td>
         </tr>
       </table>
-        <div class="divider"></div>
-      <p>Kennst auch du ein Projekt, dass für die IOTA Community interessant ist und von uns erklärt werden soll? Dann komm doch einfach mal zu uns auf den Discord Server vorbei <a target="_blank" rel="noopener noreferrer" href="https://discordapp.com/invite/2FP9uHx">https://discordapp.com/invite/2FP9uHx</a> und melde dich bei huhn#8246! Danke!</p>
+      <div class="divider"></div>
+      <p>
+        Kennst auch du ein Projekt, dass für die IOTA Community interessant ist und von uns erklärt werden soll? Dann komm doch einfach mal zu uns auf den Discord Server vorbei
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://discordapp.com/invite/2FP9uHx"
+        >https://discordapp.com/invite/2FP9uHx</a> und melde dich bei huhn#8246! Danke!
+      </p>
     </div>
   </div>
 </template>
@@ -415,7 +427,7 @@
 <script>
 import { composeAPI } from "@iota/core";
 const converter = require("@iota/converter");
-import VueQrcode from '@chenfengyuan/vue-qrcode';
+import VueQrcode from "@chenfengyuan/vue-qrcode";
 
 const iota = composeAPI({
   provider: "https://nutzdoch.einfachiota.de"
@@ -424,12 +436,13 @@ const iota = composeAPI({
 export default {
   data() {
     return {
-      address: 'IKTYKKCZFZZECSFIJYWYSUUTXCIBNIFPFSPGUIUUAYONDYUSHEZVQBNPDYUTDMTNTHBLABCYYLZKLGIVCINGBALQVX',
+      address:
+        "IKTYKKCZFZZECSFIJYWYSUUTXCIBNIFPFSPGUIUUAYONDYUSHEZVQBNPDYUTDMTNTHBLABCYYLZKLGIVCINGBALQVX",
       transactions: [],
       balances: 0
     };
   },
-  components: {VueQrcode},
+  components: { VueQrcode },
   methods: {
     getMessage(trytes) {
       return converter.trytesToAscii(trytes + "9");
@@ -493,7 +506,7 @@ export default {
   .address {
     text-align: center;
     p {
-        word-break: break-word;
+      word-break: break-word;
     }
   }
   a {
