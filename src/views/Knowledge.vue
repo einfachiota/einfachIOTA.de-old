@@ -46,7 +46,7 @@
 import GhostContentAPI from "@tryghost/content-api";
 
 const api = new GhostContentAPI({
-  url: "https://www.einfachiota.de",
+  url: "https://ghost.einfachiota.de",
   key: process.env.VUE_APP_API_KEY,
   version: "v2"
 });
