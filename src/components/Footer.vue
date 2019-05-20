@@ -32,8 +32,8 @@
       <div class="footer-main">
         <h4>IOTA</h4>
         <div class="divider"></div>
-        <a href="https://www.iota.org" target="_blank" class="footer-main-link">Website</a>
-        <a href="https://ecosystem.iota.org" target="_blank" class="footer-main-link">Öksystem</a>
+        <a href="https://www.iota.org" target="_blank" class="footer-main-link">Offizielle Webseite</a>
+        <a href="https://ecosystem.iota.org" target="_blank" class="footer-main-link">Ökosystem</a>
         <a href="https://blog.iota.org" target="_blank" class="footer-main-link">Blog</a>
       </div>
     </div>
