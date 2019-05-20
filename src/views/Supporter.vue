@@ -410,6 +410,23 @@
             >Link</a>
           </td>
         </tr>
+        <tr>
+          <td>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://tanglebay.org"
+            >Tangle Bay</a>
+          </td>
+          <td>Community Plattform - multilinguales Forum</td>
+          <td>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://tanglebay.org"
+            >Link</a>
+          </td>
+        </tr>
       </table>
       <div class="divider"></div>
       <p>
