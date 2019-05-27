@@ -9,15 +9,17 @@
     <el-footer>
       <Footer />
     </el-footer>
+    <Clap />
   </el-container>
 </template>
 
 <script>
 import NavBar from '@/components/NavBar.vue'
 import Footer from '@/components/Footer.vue'
+import Clap from '@/components/Clap.vue'
 
 export default {
-    components: {NavBar, Footer},
+    components: {NavBar, Footer, Clap},
 }
 </script>
 
@@ -167,6 +169,25 @@ button.el-button.el-button--light {
   p {
     font-size: 16px;
     line-height: 1.5;
+  }
+}
+
+#clap {
+  width: 200px;
+  height: 200px;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  img {
+    width: 80px;
+    height: 80px;
+    background-color: var(--secondary-2);
+    border-radius: 100px;
+    padding: 10px;
+    fill: white;
+    &:hover {
+      background-color: var(--primary);
+    }
   }
 }
 
