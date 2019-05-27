@@ -22,6 +22,9 @@
       <router-link v-on:click.native="navStateOpen = false"  to="/projects" class="nav-item" active-class="active">
         <span>Projekte</span>
       </router-link>
+      <router-link v-on:click.native="navStateOpen = false"  to="/workshop" class="nav-item" active-class="active">
+        <span>Workshop</span>
+      </router-link>
       <router-link v-on:click.native="navStateOpen = false"  to="/tutorials" class="nav-item" active-class="active">
         <span>Tutorials</span>
       </router-link>

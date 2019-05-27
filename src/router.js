@@ -4,6 +4,7 @@ import Home from './views/Home.vue'
 import News from './views/News.vue'
 import Knowledge from './views/Knowledge.vue'
 import Projects from './views/Projects.vue'
+import Workshop from './views/Workshop.vue'
 import Tutorials from './views/Tutorials.vue'
 import Imprint from './views/Imprint.vue'
 import Privacy from './views/Privacy.vue'
@@ -54,6 +55,11 @@ export default new Router({
       path: '/tutorials',
       name: 'tutorials',
       component: Tutorials
+    },
+    {
+      path: '/workshop',
+      name: 'workshop',
+      component: Workshop
     },
     {
       path: '/imprint',
