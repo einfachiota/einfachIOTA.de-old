@@ -22,7 +22,7 @@ export default {
     send(url, type) {
       const seed = generateSeed();
       const obj = {
-        timestamp: Date.now,
+        timestamp: Date.now(),
         type: type,
         url: url
       };
