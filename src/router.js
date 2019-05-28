@@ -5,6 +5,7 @@ import News from './views/News.vue'
 import Knowledge from './views/Knowledge.vue'
 import Projects from './views/Projects.vue'
 import Workshop from './views/Workshop.vue'
+import WorkshopPage from './views/WorkshopPage.vue'
 import Tutorials from './views/Tutorials.vue'
 import Imprint from './views/Imprint.vue'
 import Privacy from './views/Privacy.vue'
@@ -57,9 +58,14 @@ export default new Router({
       component: Tutorials
     },
     {
-      path: '/workshop',
+      path: '/workshop/',
       name: 'workshop',
       component: Workshop
+    },
+    {
+      path: '/workshop/:workshop',
+      name: 'WorkshopPage',
+      component: WorkshopPage
     },
     {
       path: '/imprint',

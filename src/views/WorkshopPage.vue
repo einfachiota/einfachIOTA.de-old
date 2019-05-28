@@ -63,11 +63,6 @@ export default {
         this.fetchData();
       }
     });
-  },
-  beforeDestroy() {
-    window.removeEventListener("click", event => {
-      event.preventDefault();
-    });
   }
 };
 </script>
