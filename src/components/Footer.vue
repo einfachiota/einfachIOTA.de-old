@@ -17,6 +17,8 @@
         <router-link to="projects" class="footer-main-link">Projekte</router-link>
         <router-link to="tutorials" class="footer-main-link">Tutorials</router-link>
         <router-link to="supporter" class="footer-main-link">Unterstützer</router-link>
+        <router-link to="devtools" class="footer-main-link">Dev Tools</router-link>
+        <router-link to="stats" class="footer-main-link">Statistiken</router-link>
         <a href="https://pool.einfachIOTA.de" class="footer-main-link">Pool</a>
       </div>
       <div class="footer-main">

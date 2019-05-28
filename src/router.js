@@ -9,9 +9,11 @@ import WorkshopPage from './views/WorkshopPage.vue'
 import Tutorials from './views/Tutorials.vue'
 import Imprint from './views/Imprint.vue'
 import Privacy from './views/Privacy.vue'
+import DevTools from './views/DevTools.vue'
 import Post from './views/Post.vue'
 import Page from './views/Page.vue'
 import Supporter from './views/Supporter.vue'
+import Stats from './views/Stats.vue'
 
 Vue.use(Router)
 
@@ -78,9 +80,19 @@ export default new Router({
       component: Privacy
     },
     {
+      path: '/stats',
+      name: 'stats',
+      component: Stats
+    }, 
+    {
       path: '/supporter',
       name: 'supporter',
       component: Supporter
+    }, 
+    {
+      path: '/devtools',
+      name: 'devtools',
+      component: DevTools
     },
     {
       path: '/post/:slug',
