@@ -59,9 +59,16 @@ export default {
           name: "CoordicidePage",
           params: { page: target.pathname }
         });
+        this.$router.go();
         event.preventDefault();
         this.fetchData();
       }
+    });
+  },
+  beforeDestroy() {
+    window.removeEventListener("click", event => {
+      this.page = ""
+      event.preventDefault();
     });
   }
 };

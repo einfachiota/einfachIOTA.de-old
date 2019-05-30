@@ -22,7 +22,7 @@ export default {
   data() {
     return {
       markdown: "",
-      page: this.$route.params.page
+      page: this.$route.query.page
     };
   },
   components: {
@@ -45,11 +45,10 @@ export default {
     }
   },
   created() {
-    console.log("Coordicide")
     this.fetchData();
   },
-  mounted() {
-        console.log("Coordicide")
+  mounted() {    
+    this.fetchData();
 
     window.addEventListener("click", event => {
       let target = event.target;
@@ -62,8 +61,8 @@ export default {
           name: "CoordicidePage",
           params: { page: target.pathname }
         });
+        this.$router.go();
         event.preventDefault();
-        this.fetchData();
       }
     });
   },
