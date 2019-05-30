@@ -15,7 +15,9 @@
         <router-link to="news" class="footer-main-link">Neuigkeiten</router-link>
         <router-link to="knowledge" class="footer-main-link">Wissen</router-link>
         <router-link to="projects" class="footer-main-link">Projekte</router-link>
+        <router-link to="workshop" class="footer-main-link">Workshop</router-link>
         <router-link to="tutorials" class="footer-main-link">Tutorials</router-link>
+        <router-link to="coordicide" class="footer-main-link">Coordicide</router-link>
         <router-link to="supporter" class="footer-main-link">Unterstützer</router-link>
         <router-link to="devtools" class="footer-main-link">Dev Tools</router-link>
         <router-link to="stats" class="footer-main-link">Statistiken</router-link>

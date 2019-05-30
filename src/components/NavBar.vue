@@ -28,6 +28,9 @@
       <router-link v-on:click.native="navStateOpen = false"  to="/tutorials" class="nav-item" active-class="active">
         <span>Tutorials</span>
       </router-link>
+      <router-link v-on:click.native="navStateOpen = false"  to="/coordicide" class="nav-item" active-class="active">
+        <span>Coordicide</span>
+      </router-link>
       <router-link v-on:click.native="navStateOpen = false"  to="/supporter" class="nav-item" active-class="active">
         <span>Unterstützer</span>
       </router-link>
