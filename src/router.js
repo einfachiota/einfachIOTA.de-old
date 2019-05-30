@@ -6,6 +6,8 @@ import Knowledge from './views/Knowledge.vue'
 import Projects from './views/Projects.vue'
 import Workshop from './views/Workshop.vue'
 import WorkshopPage from './views/WorkshopPage.vue'
+import Coordicide from './views/Coordicide.vue'
+import CoordicidePage from './views/CoordicidePage.vue'
 import Tutorials from './views/Tutorials.vue'
 import Imprint from './views/Imprint.vue'
 import Privacy from './views/Privacy.vue'
@@ -69,6 +71,16 @@ export default new Router({
       name: 'WorkshopPage',
       component: WorkshopPage
     },
+    {
+      path: '/coordicide/',
+      name: 'Coordicide',
+      component: Coordicide
+    },
+    {
+      path: '/coordicide/:page',
+      name: 'CoordicidePage',
+      component: CoordicidePage
+    }, 
     {
       path: '/imprint',
       name: 'imprint',

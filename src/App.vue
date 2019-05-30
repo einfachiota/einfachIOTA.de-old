@@ -9,7 +9,6 @@
     <el-footer>
       <Footer />
     </el-footer>
-    <Clap />
   </el-container>
 </template>
 
