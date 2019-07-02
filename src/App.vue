@@ -1,44 +1,46 @@
 <template>
   <el-container>
-    <el-header> 
+    <el-header>
       <NavBar />
-      </el-header>
+    </el-header>
     <el-main>
-      <router-view/>
+      <router-view />
     </el-main>
     <el-footer>
       <Footer />
     </el-footer>
+    <TanglePageTracker />
   </el-container>
 </template>
 
 <script>
-import NavBar from '@/components/NavBar.vue'
-import Footer from '@/components/Footer.vue'
-import Clap from '@/components/Clap.vue'
+import NavBar from "@/components/NavBar.vue";
+import Footer from "@/components/Footer.vue";
+import TanglePageTracker from "@/components/TanglePageTracker.vue";
 
 export default {
-    components: {NavBar, Footer, Clap},
-}
+  components: { NavBar, Footer, TanglePageTracker }
+};
 </script>
 
 <style lang="scss">
-
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400|Roboto+Slab:700');
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400|Roboto+Slab:700");
 
 body {
- margin: 0;
- font-family: 'Open Sans', sans-serif;
- -webkit-font-smoothing: antialiased;
- -moz-osx-font-smoothing: grayscale;
- color: var(--dark);
-} 
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--dark);
+}
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   margin: 0;
   font-weight: 700;
-  font-family: 'Roboto Slab', serif;
-
+  font-family: "Roboto Slab", serif;
 }
 h1 {
   font-size: 62px;
@@ -59,26 +61,26 @@ p {
   line-height: 1.5;
 }
 :root {
-  --primary: #00B7C5;
+  --primary: #00b7c5;
   --primary-darken: #03a3af;
-  --secondary: #0B5D9E;
-  --secondary-2: #5AB0B2;
-  --dark: #3D4449;
-  --darker: #0F3535;
-  --gray: #E2E2E2;
-  --light: #EFEFEF;
-  --white: #FFFFFF;
-  --white_5: rgba(255,255,255,.05);
-  --white_10: rgba(255,255,255,.1);
-  --white_25: rgba(255,255,255,.25);
-  --white_50: rgba(255,255,255,.5);
-  --red: #F16465;
-  --orange: #E69255;
-  --yellow: #E6BE54;
-  --purple: #8F60A8;
+  --secondary: #0b5d9e;
+  --secondary-2: #5ab0b2;
+  --dark: #3d4449;
+  --darker: #0f3535;
+  --gray: #e2e2e2;
+  --light: #efefef;
+  --white: #ffffff;
+  --white_5: rgba(255, 255, 255, 0.05);
+  --white_10: rgba(255, 255, 255, 0.1);
+  --white_25: rgba(255, 255, 255, 0.25);
+  --white_50: rgba(255, 255, 255, 0.5);
+  --red: #f16465;
+  --orange: #e69255;
+  --yellow: #e6be54;
+  --purple: #8f60a8;
   --border-radius: 10px;
   --border-radius-sm: 5px;
-  --box-shadow: 0 3px 6px rgba(0,0,0,.15);
+  --box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
   --transition-in-out: all 0.3s ease-in-out;
 }
 .el-footer {
@@ -96,21 +98,23 @@ p {
   border: none !important;
 }
 .el-button--primary {
-    background-color: var(--primary) !important;
-    color: var(--white) !important;
-    &:hover {
-      background-color: var(--primary-darken) !important;
-    }
+  background-color: var(--primary) !important;
+  color: var(--white) !important;
+  &:hover {
+    background-color: var(--primary-darken) !important;
+  }
 }
 button.el-button.el-button--light {
   background-color: var(--light) !important;
   color: var(--dark) !important;
-  &:hover {
+  &:hover  {
     background-color: grey !important;
   }
 }
 
-.el-pagination.is-background .btn-next, .el-pagination.is-background .btn-prev, .el-pagination.is-background .el-pager li {
+.el-pagination.is-background .btn-next,
+.el-pagination.is-background .btn-prev,
+.el-pagination.is-background .el-pager li {
   &:hover {
     color: var(--primary) !important;
   }
@@ -152,8 +156,8 @@ button.el-button.el-button--light {
     box-sizing: border-box;
   }
   h1 {
-  font-size: 42px;
-  line-height: 1.25;
+    font-size: 42px;
+    line-height: 1.25;
   }
   h2 {
     font-size: 32px;
@@ -170,6 +174,4 @@ button.el-button.el-button--light {
     line-height: 1.5;
   }
 }
-
-
 </style>
