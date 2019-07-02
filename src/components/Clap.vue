@@ -10,14 +10,14 @@ import generateSeed from "../utils/generateSeed.js";
 const Converter = require("@iota/converter");
 
 const iota = iotaLibrary.composeAPI({
-  provider: "https://nutzdoch.einfachiota.de"
+  provider: "https://nodes.devnet.thetangle.org:443"
 });
 
 export default {
   methods: {
     clap() {
       console.log("clap!");
-      this.send("https://www.einfachiota.de", "clap");
+      this.send(`https://www.einfachiota.de${this.$router.currentRoute.path}`, "clap")
     },
     send(url, type) {
       const seed = generateSeed();
@@ -36,10 +36,9 @@ export default {
         }
       ];
 
-      // Hier bereiten wir alles vor uns senden die Transaktion zum Tangle. Wenn alles klappt hat, bekommt ihr ein Budle Objekt in der Konsole angezeigt.
       iota
         .prepareTransfers(seed, transfers)
-        .then(trytes => iota.sendTrytes(trytes, 3, 14))
+        .then(trytes => iota.sendTrytes(trytes, 3, 9))
         .then(bundle => {
           console.log(bundle);
         })
@@ -47,29 +46,23 @@ export default {
           console.error(err);
         });
     }
-  },
-  mounted() {
-    this.send("https://www.einfachiota.de", "page_visit");
   }
 };
 </script>
 
 <style lang="scss">
 #clap {
-
-  display: none;
-
-  width: 200px;
-  height: 200px;
+  width: 20%;
+  height: 20%;
   position: fixed;
   bottom: 0px;
   right: 0px;
   img {
     cursor: pointer;
-    width: 80px;
-    height: 80px;
+    width: 20%;
+    height: 20%;
     background-color: var(--secondary-2);
-    border-radius: 100px;
+    border-radius: 10px;
     padding: 10px;
     fill: white;
     &:hover {
