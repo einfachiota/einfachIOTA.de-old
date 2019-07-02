@@ -12,7 +12,7 @@
 <script>
 const iotaLibrary = require("@iota/core");
 const iota = iotaLibrary.composeAPI({
-  provider: "https://nutzdoch.einfachiota.de"
+  provider: "https://nodes.devnet.thetangle.org:443"
 });
 
 export default {
@@ -23,7 +23,7 @@ export default {
   },
   created() {
     iota
-      .findTransactions({ addresses: [process.env.VUE_APP_CLAP_ADDRESS] })
+      .findTransactions({ addresses: [process.env.VUE_APP_TPT_ADDRESS] })
       .then(transactions => {
         console.log("transactions", transactions);
         this.page_count = transactions.length;
