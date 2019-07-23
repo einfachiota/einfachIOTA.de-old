@@ -2,7 +2,7 @@
   <div class="news">
     <div class="hero">
       <div class="container">
-        <h1 class="heading">Neuigkeiten von der IOTA Foundation</h1>
+        <h1 class="heading">Alle Neuigkeiten</h1>
         <div class="divider"></div>
       </div>
     </div>
