@@ -16,6 +16,7 @@ import Post from './views/Post.vue'
 import Page from './views/Page.vue'
 import Supporter from './views/Supporter.vue'
 import Stats from './views/Stats.vue'
+import Million from './views/Million.vue'
 
 Vue.use(Router)
 
@@ -105,6 +106,11 @@ export default new Router({
       path: '/devtools',
       name: 'devtools',
       component: DevTools
+    },
+    {
+      path: '/million',
+      name: 'million',
+      component: Million
     },
     {
       path: '/post/:slug',
