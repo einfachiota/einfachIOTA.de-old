@@ -5,6 +5,13 @@
         <h1 class="heading">Wissen wie IOTA funktioniert</h1>
         <div class="divider"></div>
         <p class="sub-heading">IOTA in einfacher Sprache erkärt.</p>
+        <div class="description">
+          <p>Hier finder ihr eine Reihe von Erklärungen.</p>
+          <p>Einen kompletten Guide hat <a href="https://twitter.com/Schmucklos_" target="_blank">Schmucklos</a> für euch zusammengestellt:</p>
+          <a href="https://www.iota-einsteiger-guide.de/index.html" target="_blank">
+            <img class="logo_guide" src="@/assets/logo-guide.jpg" />
+          </a>
+        </div>
       </div>
     </div>
     <div class="container">
@@ -127,6 +134,12 @@ export default {
     font-size: 1.5em;
     &:hover {
       color: var(--secondary-2);
+    }
+  }
+  .description {
+    text-align: left;
+    .logo_guide {
+      height: 2%;
     }
   }
 }
