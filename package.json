@@ -22,12 +22,12 @@
     "vue-markdown": "^2.2.4",
     "vue-router": "^3.0.3",
     "vuex": "^3.0.1",
-    "@vue/cli-service": "^3.7.0"
-  },
-  "devDependencies": {
+    "@vue/cli-service": "^3.7.0",
     "@vue/cli-plugin-babel": "^3.7.0",
     "@vue/cli-plugin-eslint": "^3.7.0",
-    "@vue/cli-plugin-pwa": "^3.7.0",
+    "@vue/cli-plugin-pwa": "^3.7.0"
+  },
+  "devDependencies": {
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
