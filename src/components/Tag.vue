@@ -14,6 +14,8 @@ export default {
           return { name: "von der IOTA Foundation", type: "primary" };
         } else if (this.tags[1].name == "Ecosystem") {
           return { name: "aus dem IOTA Ökosystem", type: "success" };
+        } else if (this.tags[1].name == "einfachIOTA") {
+          return { name: "von einfachIOTA", type: "default" };
         }
       }
       return "";
@@ -28,5 +30,8 @@ export default {
 }
 .tag .el-badge__content--success {
   background-color: #06e89d;
+}
+.tag .el-badge__content--default {
+  background-color: var(--primary);
 }
 </style>
