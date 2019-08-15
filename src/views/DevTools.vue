@@ -15,9 +15,27 @@
       >Neuen Seed generieren</button>
       <br />
       <br />
+
+      <h2>Adressen generieren</h2>
+      <p>Adresse:</p>
+      <pre>{{address}}</pre>
+      <button
+        type="button"
+        @click="generateNewAddress"
+        class="el-button el-button--primary"
+      >Neue Adresse generieren</button>
+
+      <br />
+      <br />
       <h2>Devnet Nachrichten</h2>
       <p>Versende "Zero Value" Transaktionen mit einer Nachricht ins IOTA Devnet!</p>
-      <p v-if="transaction">Transaction sent! See it here on: <a :href="'https://devnet.thetangle.org/transaction/'+ transaction" target="_blank">TheTangle.org</a></p>
+      <p v-if="transaction">
+        Transaction sent! See it here on:
+        <a
+          :href="'https://devnet.thetangle.org/transaction/'+ transaction"
+          target="_blank"
+        >TheTangle.org</a>
+      </p>
       <el-form ref="form" :model="form" label-width="120px">
         <el-form-item label="Nachricht">
           <el-input v-model="form.message"></el-input>
@@ -45,6 +63,7 @@ export default {
   data() {
     return {
       seed: "",
+      address: "",
       form: {
         message: "",
         address: ""
@@ -55,6 +74,16 @@ export default {
   methods: {
     generateNewSeed() {
       this.seed = generateSeed();
+    },
+    generateNewAddress() {
+      iota
+        .getNewAddress(this.seed)
+        .then(address => {
+          this.address = address;
+        })
+        .catch(err => {
+          // ...
+        });
     },
     onSubmit() {
       console.log("submit!");
@@ -88,6 +117,7 @@ export default {
   },
   created() {
     this.seed = generateSeed();
+    this.generateNewAddress();
   }
 };
 </script>
