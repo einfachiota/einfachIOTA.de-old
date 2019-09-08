@@ -7,12 +7,12 @@
     <div class="content">
       <h2>Werde zum IOTA Millionär!</h2>
       <p>Gib deinen IOTA Millionär Code und deine IOTA Adress ein, um ein IOTA Millonär zu werden.</p>
-      <el-form label-position="right" label-width="100px" :model="form">
+      <el-form label-position="right" label-width="100px" :model="data">
         <el-form-item label="Code">
-          <el-input placeholder="Dein einfachIOTA Millionäre Code" v-model="form.key"></el-input>
+          <el-input placeholder="Dein einfachIOTA Millionäre Code" v-model="data.code"></el-input>
         </el-form-item>
         <el-form-item label="Adresse">
-          <el-input placeholder="Deine IOTA Adresse" v-model="form.address"></el-input>
+          <el-input placeholder="Deine IOTA Adresse" v-model="data.address"></el-input>
         </el-form-item>
         <el-button
           :loading="sending"
@@ -56,25 +56,38 @@
 </template>
 
 <script>
+const axios = require("axios");
+
 export default {
   name: "Million",
   data() {
     return {
-      form: {
+      data: {
         address: "",
-        key: ""
+        code: ""
       },
       sending: false
     };
   },
   methods: {
     request_tokens() {
-      console.log("that");
+      console.log("request_tokens");
       this.sending = true;
       let self = this;
-      setTimeout(() => {
-        self.sending = false;
-      }, 1000);
+      axios
+        .post(process.env.VUE_APP_MILLIONAIRE_URL, this.data)
+        .then(function(response) {
+          // handle success
+          console.log(response);
+          self.sending = false;
+          self.code = ""
+          self.address = ""
+        })
+        .catch(function(error) {
+          // handle error
+          self.sending = false;
+          console.log(error);
+        });
     }
   }
 };
