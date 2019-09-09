@@ -15,10 +15,18 @@
           <el-form-item label="Adresse">
             <el-input placeholder="Deine IOTA Adresse" v-model="form.address"></el-input>
           </el-form-item>
+
+          <vue-recaptcha
+            :sitekey="rc_sitekey"
+            ref="recaptcha"
+            @verify="onCaptchaVerified"
+            @expired="onCaptchaExpired"
+          ></vue-recaptcha>
           <div v-if="error">
             <p>Fehler! Überprüfe deine Eingaben und versuche es noch einmal.</p>
           </div>
           <el-button
+            :disabled="disabled"
             :loading="sending"
             type="primary"
             @click="request_tokens"
@@ -97,9 +105,11 @@
 
 <script>
 const axios = require("axios");
+import VueRecaptcha from "vue-recaptcha";
 
 export default {
   name: "Million",
+  components: { VueRecaptcha },
   data() {
     return {
       form: {
@@ -109,7 +119,9 @@ export default {
       sending: false,
       success: false,
       transaction: null,
-      error: false
+      error: false,
+      rc_sitekey: "6LdhUrcUAAAAAL8bY2d6LeagUBo9TlboOb4PhrLW",
+      disabled: false
     };
   },
   methods: {
@@ -127,15 +139,30 @@ export default {
           self.form.code = "";
           self.form.address = "";
           self.success = true;
-          self.transaction = response.data
+          self.transaction = response.data;
+          self.form.recaptcha = ""
+          self.$refs.recaptcha.reset()
+
         })
         .catch(function(error) {
           // handle error
           console.log("handle error");
           self.sending = false;
           self.error = error;
+          self.form.recaptcha = ""
           console.log(error);
+          self.$refs.recaptcha.reset()
         });
+    },
+    onCaptchaVerified: function(recaptchaToken) {
+      this.disabled = false
+      this.form.recaptcha = recaptchaToken
+    },
+    onCaptchaExpired: function(data) {
+      console.log("onCaptchaExpired", data);
+      self.error = error;
+      self.form.recaptcha = ""
+      this.$refs.recaptcha.reset()
     }
   }
 };
