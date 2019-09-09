@@ -29,6 +29,7 @@
     "vue": "^2.6.10",
     "vue-clipboard2": "^0.3.0",
     "vue-markdown": "^2.2.4",
+    "vue-recaptcha": "^1.2.0",
     "vue-router": "^3.0.3",
     "vue-template-compiler": "^2.5.21",
     "vuex": "^3.0.1"
