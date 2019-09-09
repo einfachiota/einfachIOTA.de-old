@@ -5,22 +5,62 @@
       <div class="divider"></div>
     </div>
     <div class="content">
-      <h2>Werde zum IOTA Millionär!</h2>
-      <p>Gib deinen IOTA Millionär Code und deine IOTA Adress ein, um ein IOTA Millonär zu werden.</p>
-      <el-form label-position="right" label-width="100px" :model="data">
-        <el-form-item label="Code">
-          <el-input placeholder="Dein einfachIOTA Millionäre Code" v-model="data.code"></el-input>
-        </el-form-item>
-        <el-form-item label="Adresse">
-          <el-input placeholder="Deine IOTA Adresse" v-model="data.address"></el-input>
-        </el-form-item>
-        <el-button
-          :loading="sending"
-          type="primary"
-          @click="request_tokens"
-          class="el-button el-button--primary"
-        >1 Millionen IOTA anfordern</el-button>
-      </el-form>
+      <div v-if="!success">
+        <h2>Werde zum IOTA Millionär!</h2>
+        <p>Gib deinen IOTA Millionär Code und deine IOTA Adress ein, um ein IOTA Millonär zu werden.</p>
+        <el-form label-position="right" label-width="100px" :model="form">
+          <el-form-item label="Code">
+            <el-input placeholder="Dein einfachIOTA Millionäre Code" v-model="form.code"></el-input>
+          </el-form-item>
+          <el-form-item label="Adresse">
+            <el-input placeholder="Deine IOTA Adresse" v-model="form.address"></el-input>
+          </el-form-item>
+          <div v-if="error">
+            <p>Fehler! Überprüfe deine Eingaben und versuche es noch einmal.</p>
+          </div>
+          <el-button
+            :loading="sending"
+            type="primary"
+            @click="request_tokens"
+            class="el-button el-button--primary"
+          >1 Millionen IOTA anfordern</el-button>
+        </el-form>
+      </div>
+      <div v-else>
+        <h2>Du bist IOTA Millionär!</h2>
+        <p>Herzlichen Glückwunsch!, deine IOTA Tokens sind Unterwegs!</p>
+        <p>
+          Du kannst hier nach dem Status schauen:
+          <a
+            :href="'https://devnet.thetangle.org/transactions/' + transaction"
+            target="_blank"
+          >theTangle.org</a>
+        </p>
+        <h3>Du willst mehr über IOTA und einfachIOTA erfahren?</h3>
+        <p>Folge uns auf Twitter um immer auf dem neusten Stand zu bleinen. Tritt unsere Discord Server und mach bei der Community mit oder schau auf unserem Gibthub vorbei um dir den Code unserer Projekte anzuschauen!</p>
+        <a
+          href="https://twitter.com/einfachIOTA"
+          target="_blank"
+          tag="button"
+          class="btn-social el-button el-button--primary"
+          style="margin: 0"
+        >Twitter</a>
+        <a
+          href="https://discord.gg/rV3TMSU"
+          target="_blank"
+          tag="button"
+          class="btn-social el-button el-button--primary"
+          style="margin: 0 30px 0 30px"
+        >Discord</a>
+        <a
+          href="https://github.com/einfachiota"
+          target="_blank"
+          tag="button"
+          class="btn-social el-button el-button--primary"
+          style="margin: 0"
+        >Github</a>
+      </div>
+
       <br />
       <br />
       <h2>Fragen und Antworten</h2>
@@ -62,11 +102,14 @@ export default {
   name: "Million",
   data() {
     return {
-      data: {
+      form: {
         address: "",
         code: ""
       },
-      sending: false
+      sending: false,
+      success: false,
+      transaction: null,
+      error: false
     };
   },
   methods: {
@@ -75,17 +118,22 @@ export default {
       this.sending = true;
       let self = this;
       axios
-        .post(process.env.VUE_APP_MILLIONAIRE_URL, this.data)
+        .post(process.env.VUE_APP_MILLIONAIRE_URL, this.form)
         .then(function(response) {
           // handle success
+          console.log("handle success");
           console.log(response);
           self.sending = false;
-          self.code = ""
-          self.address = ""
+          self.form.code = "";
+          self.form.address = "";
+          self.success = true;
+          self.transaction = response.data
         })
         .catch(function(error) {
           // handle error
+          console.log("handle error");
           self.sending = false;
+          self.error = error;
           console.log(error);
         });
     }
