@@ -1,7 +1,7 @@
 <template>
   <nav v-bind:class="{ open: navStateOpen }" class="main-nav">
     <router-link to="/" class="nav-item nav-item--logo" exact-active-class="active">
-      <img alt="einfachIOTA" class="logo" src="../assets/logo.svg">
+      <img alt="einfachIOTA" class="logo" src="../assets/logo.svg" />
     </router-link>
 
     <div v-bind:class="{ open: navStateOpen }" class="menu-btn-container" @click="toggleNav">
@@ -13,25 +13,60 @@
     </div>
 
     <div v-bind:class="{ open: navStateOpen }" class="nav-menu">
-      <router-link v-on:click.native="navStateOpen = false" to="/news" class="nav-item" active-class="active">
-        <span >Neuigkeiten</span>
+      <router-link
+        v-on:click.native="navStateOpen = false"
+        to="/news"
+        class="nav-item"
+        active-class="active"
+      >
+        <span>Neuigkeiten</span>
       </router-link>
-      <router-link v-on:click.native="navStateOpen = false"  to="/knowledge" class="nav-item" active-class="active">
+      <router-link
+        v-on:click.native="navStateOpen = false"
+        to="/knowledge"
+        class="nav-item"
+        active-class="active"
+      >
         <span>Wissen</span>
       </router-link>
-      <router-link v-on:click.native="navStateOpen = false"  to="/projects" class="nav-item" active-class="active">
+      <router-link
+        v-on:click.native="navStateOpen = false"
+        to="/projects"
+        class="nav-item"
+        active-class="active"
+      >
         <span>Projekte</span>
       </router-link>
-      <router-link v-on:click.native="navStateOpen = false"  to="/workshop" class="nav-item" active-class="active">
+      <router-link
+        v-on:click.native="navStateOpen = false"
+        to="/workshop"
+        class="nav-item"
+        active-class="active"
+      >
         <span>Workshop</span>
       </router-link>
-      <router-link v-on:click.native="navStateOpen = false"  to="/tutorials" class="nav-item" active-class="active">
+      <router-link
+        v-on:click.native="navStateOpen = false"
+        to="/tutorials"
+        class="nav-item"
+        active-class="active"
+      >
         <span>Tutorials</span>
       </router-link>
-      <router-link v-on:click.native="navStateOpen = false"  to="/coordicide" class="nav-item" active-class="active">
+      <router-link
+        v-on:click.native="navStateOpen = false"
+        to="/coordicide"
+        class="nav-item"
+        active-class="active"
+      >
         <span>Coordicide</span>
       </router-link>
-      <router-link v-on:click.native="navStateOpen = false"  to="/supporter" class="nav-item" active-class="active">
+      <router-link
+        v-on:click.native="navStateOpen = false"
+        to="/supporter"
+        class="nav-item"
+        active-class="active"
+      >
         <span>Unterstützer</span>
       </router-link>
     </div>
@@ -101,7 +136,7 @@ export default {
       opacity: 1;
       img.logo {
         width: auto;
-        height: 50px;
+        height: 80px;
         transition: all 200ms ease-in-out;
       }
     }
