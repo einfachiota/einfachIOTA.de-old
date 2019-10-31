@@ -325,6 +325,33 @@
             <a target="_blank" rel="noopener noreferrer" href="https://www.einfachiota.de/#/post/projekt-der-woche-tangle-bay">zum Artikel</a>
           </td>
         </tr>
+         <tr>
+          <td>
+            <a target="_blank" rel="noopener noreferrer" href="www.easy-passphrase-saver.de">IOTA Seed Saver</a>
+          </td>
+          <td>Edelstahlplatte zur Sicherung des Seeds oder Passphrase </td>
+          <td>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.einfachiota.de/#/post/projekt-der-woche-iota-seed-saver">zum Artikel</a>
+          </td>
+        </tr>
+        <tr>
+        <td>
+          <a target="_blank" rel="noopener noreferrer" href="www.deposy.org">Deposy</a>
+        </td>
+        <td>innovatives Pfandsystem mit IOTA</td>
+        <td>
+          <a target="_blank" rel="noopener noreferrer" href="https://www.einfachiota.de/#/post/projekt-der-woche-deposy">zum Artikel</a>
+        </td>
+      </tr>
+      <tr>
+          <td>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.st.com/content/st_com/en/products/embedded-software/mcu-mpu-embedded-software/stm32-embedded-software/stm32cube-expansion-packages/x-cube-iota1.html">CUBE-IOTA1</a>
+          </td>
+          <td>IOTA Erweiterung des STM32 Mikrocontroller von STMicroelectronics</td>
+          <td>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.einfachiota.de/#/post/pdw-der-cube-iota1-von-stmicroelectronics">zum Artikel</a>
+          </td>
+        </tr>
       </table>
       <div class="divider"></div>
       <p>
