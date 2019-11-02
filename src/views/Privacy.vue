@@ -2,7 +2,10 @@
   <div class="content">
     <h1 class="heading">Datenschutzerklärung</h1>
     <div class="divider"></div>
-    <h2>1. Datenschutz auf einen Blick</h2>
+    <p class="scroll" @click="scrollMeTo('general')">Allgemein</p>
+    <p class="scroll" @click="scrollMeTo('eimag')">eimag.einfachIOTA.de</p>
+    <br />
+    <h2 ref="general">1. Datenschutz auf einen Blick</h2>
     <h3>Allgemeine Hinweise</h3>
     <p>
       Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie unsere Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können. Ausführliche Informationen zum Thema Datenschutz entnehmen Sie unserer unter diesem Text aufgeführten Datenschutzerklärung.
@@ -33,7 +36,7 @@
     <p>Sebastian Heußer</p>
     <p>Collingstraße 104</p>
     <p>66424 Homburg</p>
-    <p>E-Mail: huhn@einfachiota.de</p>
+    <p>E-Mail: huhn(at)einfachIOTA(punkt)de</p>
     <p>Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z.B. Namen, E-Mail-Adressen o. Ä.) entscheidet.</p>
     <h3>Widerruf Ihrer Einwilligung zur Datenverarbeitung</h3>
     <p>
@@ -67,51 +70,127 @@
       Wenn die Verarbeitung Ihrer personenbezogenen Daten unrechtmäßig geschah / geschieht, können Sie statt der Löschung die Einschränkung der Datenverarbeitung verlangen.
       Wenn wir Ihre personenbezogenen Daten nicht mehr benötigen, Sie sie jedoch zur Ausübung, Verteidigung oder Geltendmachung von Rechtsansprüchen benötigen, haben Sie das Recht, statt der Löschung die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen.
       Wenn Sie einen Widerspruch nach Art. 21 Abs. 1 DSGVO eingelegt haben, muss eine Abwägung zwischen Ihren und unseren Interessen vorgenommen werden. Solange noch nicht feststeht, wessen Interessen überwiegen, haben Sie das Recht, die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen.
-      Browsertyp und Browserversion
-      verwendetes Betriebssystem
-      Referrer URL
-      Hostname des zugreifenden Rechners
-      Uhrzeit der Serveranfrage
-      IP-Adresse
-      Facebook-Name
-      Facebook-Profil- und Titelbild
-      Facebook-Titelbild
-      bei Facebook hinterlegte E-Mail-Adresse
-      Facebook-ID
-      Facebook-Freundeslisten
-      Facebook Likes (“Gefällt-mir”-Angaben)
-      Geburtstag
-      Geschlecht
-      Land
-      Sprache
-      Diese Daten werden zur Einrichtung, Bereitstellung und Personalisierung Ihres Accounts genutzt.
-      Die Registrierung mit Facebook-Connect und die damit verbundenen Datenverarbeitungsvorgänge erfolgen auf Grundlage Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Diese Einwilligung können Sie jederzeit mit Wirkung für die Zukunft widerrufen.
-      Weitere Informationen finden Sie in den Facebook-Nutzungsbedingungen und den Facebook-Datenschutzbestimmungen. Diese finden Sie unter: https://de-de.facebook.com/about/privacy/ und https://de-de.facebook.com/legal/terms/.
-      Kommentarfunktion auf dieser Website
-      Für die Kommentarfunktion auf dieser Seite werden neben Ihrem Kommentar auch Angaben zum Zeitpunkt der Erstellung des Kommentars, Ihre E-Mail-Adresse und, wenn Sie nicht anonym posten, der von Ihnen gewählte Nutzername gespeichert.
-      Speicherung der IP-Adresse
-      Unsere Kommentarfunktion speichert die IP-Adressen der Nutzer, die Kommentare verfassen. Da wir Kommentare auf unserer Seite nicht vor der Freischaltung prüfen, benötigen wir diese Daten, um im Falle von Rechtsverletzungen wie Beleidigungen oder Propaganda gegen den Verfasser vorgehen zu können.
-      Abonnieren von Kommentaren
-      Als Nutzer der Seite können Sie nach einer Anmeldung Kommentare abonnieren. Sie erhalten eine Bestätigungsemail, um zu prüfen, ob Sie der Inhaber der angegebenen E-Mail-Adresse sind. Sie können diese Funktion jederzeit über einen Link in den Info-Mails abbestellen. Die im Rahmen des Abonnierens von Kommentaren eingegebenen Daten werden in diesem Fall gelöscht; wenn Sie diese Daten für andere Zwecke und an anderer Stelle (z.B. Newsletterbestellung) an uns übermittelt haben, verbleiben die jedoch bei uns.
-      Speicherdauer der Kommentare
-      Die Kommentare und die damit verbundenen Daten (z.B. IP-Adresse) werden gespeichert und verbleiben auf unserer Website, bis der kommentierte Inhalt vollständig gelöscht wurde oder die Kommentare aus rechtlichen Gründen gelöscht werden müssen (z.B. beleidigende Kommentare).
-      Rechtsgrundlage
-      Die Speicherung der Kommentare erfolgt auf Grundlage Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Sie können eine von Ihnen erteilte Einwilligung jederzeit widerrufen. Dazu reicht eine formlose Mitteilung per E-Mail an uns. Die Rechtmäßigkeit der bereits erfolgten Datenverarbeitungsvorgänge bleibt vom Widerruf unberührt.
-      Verarbeiten von Daten (Kunden- und Vertragsdaten)
-      Wir erheben, verarbeiten und nutzen personenbezogene Daten nur, soweit sie für die Begründung, inhaltliche Ausgestaltung oder Änderung des Rechtsverhältnisses erforderlich sind (Bestandsdaten). Dies erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, der die Verarbeitung von Daten zur Erfüllung eines Vertrags oder vorvertraglicher Maßnahmen gestattet. Personenbezogene Daten über die Inanspruchnahme unserer Internetseiten (Nutzungsdaten) erheben, verarbeiten und nutzen wir nur, soweit dies erforderlich ist, um dem Nutzer die Inanspruchnahme des Dienstes zu ermöglichen oder abzurechnen.
-      Die erhobenen Kundendaten werden nach Abschluss des Auftrags oder Beendigung der Geschäftsbeziehung gelöscht. Gesetzliche Aufbewahrungsfristen bleiben unberührt.
-      Datenübermittlung bei Vertragsschluss für Dienstleistungen und digitale Inhalte
-      Wir übermitteln personenbezogene Daten an Dritte nur dann, wenn dies im Rahmen der Vertragsabwicklung notwendig ist, etwa an das mit der Zahlungsabwicklung beauftragte Kreditinstitut.
-      Eine weitergehende Übermittlung der Daten erfolgt nicht bzw. nur dann, wenn Sie der Übermittlung ausdrücklich zugestimmt haben. Eine Weitergabe Ihrer Daten an Dritte ohne ausdrückliche Einwilligung, etwa zu Zwecken der Werbung, erfolgt nicht.
-      Grundlage für die Datenverarbeitung ist Art. 6 Abs. 1 lit. b DSGVO, der die Verarbeitung von Daten zur Erfüllung eines Vertrags oder vorvertraglicher Maßnahmen gestattet.
-      Webanalysedienst Matomo
     </p>
+    <span ref="eimag"></span>
+    <br>
+    <br>
+    <br>
+    <h2>eimag.einfachIOTA.de</h2>
+    <h3>Für was werden die Daten verwendet?</h3>
+    <p>Wir verwenden die folgenden personenbezogenen Daten für die folgenden Zwecke.</p>
+    <h4>1. Bestellprozess</h4>
+    <p>Wir verarbeiten die personenbezogenen Daten, die Sie uns übermitteln, 
+      wenn Sie Ihre Bestellung aufgeben. Diese personenbezogenen Daten sind erforderlich, 
+      um Ihre Bestellung auszuführen, Ihre Bestellung zu bestätigen und Ihre Bestellung, 
+      die Zahlung sowie eine mögliche Erstattung zu bewerten. Die Rechtsgrundlage für diese 
+      Verarbeitung von personenbezogenen Daten besteht darin, dass sie für die Erfüllung eines Vertrags, 
+      wie in der DSGVO definiert, erforderlich ist. 
+      Wir verarbeiten die folgenden personenbezogenen Daten im Bestellprozess:</p>
+      <ul>
+        <li>Vor- und Nachname</li>
+        <li>Daten zur Anschrift</li>
+        <li>Kontaktdaten</li>
+        <li>Bestellung</li>
+        <li>Zahlungsdaten</li>
+      </ul>
+      
+      <h4>2. Kundendienst</h4>
+      <p>Wenn Sie sich mit unserem Kundendienst in Verbindung setzen, verwenden wir die von Ihnen 
+        übermittelten personenbezogenen Daten, um Ihre Frage zu beantworten oder Ihre Beanstandung zu bearbeiten. 
+        Die Rechtsgrundlage für diese Verarbeitung von personenbezogenen Daten besteht darin, dass sie für die Erfüllung
+        eines Vertrags, wie in der DSGVO definiert, erforderlich ist. Wir verarbeiten die folgenden personenbezogenen Daten 
+        für Kundendienstzwecke:</p>
+      <ul>
+        <li>Vor- und Nachname</li>
+        <li>Daten zur Anschrift</li>
+        <li>Kontaktdaten</li>
+        <li>Bestellung</li>
+        <li>Zahlungsdaten</li>
+      </ul>
+      
+      <h4>3. Verhinderung von Betrug</h4>
+      <p>Wir verarbeiten einen Teil der oben genannten personenbezogenen Daten auch, um Betrug und andere Formen
+        des Missbrauchs zu verhindern. Die Rechtsgrundlage für diese Verarbeitungsaktivität besteht darin, 
+        dass sie erforderlich ist, um ein legitimes Interesse von einfachIOTA.de (Verhinderung von Betrug), 
+        wie in der DSGVO definiert, zu verfolgen.</p>
+
+      <h3>Wie lange bewahren wir personenbezogene Daten auf</h3>
+      <p>einfachIOTA.de wird Ihre personenbezogenen Daten nicht länger aufbewahren, 
+        als es für die Zwecke, für die Ihre personenbezogenen Daten erfasst werden, 
+        unbedingt erforderlich ist. Wir werden Ihre personenbezogenen Daten nur dann länger aufbewahren, 
+        wenn wir per Gesetz dazu verpflichtet sind. Wir löschen den größten Teil Ihrer personenbezogenen Daten 2 Jahre,
+        nachdem Sie Ihre Bestellung aufgegeben haben. Wir nutzen diese 2-jährige Frist für administrative Zwecke 
+        sowie für die Bearbeitung eventueller Fragen und Beanstandungen zu Ihrer Bestellung.
+        Wir bewahren personenbezogene Daten,die wir zur Berichterstattung, Analyse und Verhinderung von Missbrauch verwenden, 
+        bis zu 20 Jahre nach Aufgabe Ihrer Bestellung auf. Wir können Ihre personenbezogenen Daten nicht aus Sicherungen entfernen.
+        Wenn wir eine Wiederherstellung aus einer Sicherung vornehmen, werden wir Ihre personenbezogenen Daten jedoch umgehend löschen.
+      </p>
+      <h3>Weitergabe an Dritte</h3>
+      <p>einfachIOTA.de wird Ihre personenbezogenen Daten nicht an Dritte verkaufen, 
+        und wir werden diese Daten nur dann an Dritte weitergeben, wenn dies für die Erfüllung 
+        unseres Vertrags mit Ihnen erforderlich ist, Analyse- und Marketingzwecken dient oder für die 
+        Befolgung von Rechtspflichten notwendig ist.</p>
+
+      <p>Ihre personenbezogenen Daten können an die folgenden Parteien weitergegeben werden:</p>
+      <ul>
+        <li>Software-Anbieter</li>
+        <li>Implementierungspartner</li>
+      </ul>
+
+      <p>Sobald wir Drittunternehmen mit der Verarbeitung Ihrer personenbezogenen Daten in unserem Namen beauftragen,
+        werden wir einen Datenverarbeitungsvertrag abschließen, um dasselbe Niveau an Schutz und vertraulicher Behandlung
+        Ihrer personenbezogenen Daten zu gewährleisten. einfachIOTA.de hat in diesem Fall weiterhin die letztendliche 
+        Verantwortung für solche Verarbeitungsaktivitäten.</p>
+      
+      <h3>Zugang zu, Korrektur und Löschung von personenbezogenen Daten</h3>
+      <p>Sie haben das Recht, auf die Gesamtheit der personenbezogenen Daten, die wir zu Ihrer Person erfassen, 
+      zuzugreifen sowie zu verlangen, dass wir Ihre personenbezogenen Daten korrigieren oder löschen. 
+      Wenn Sie der Ansicht sind, dass wir Ihre personenbezogenen Daten ohne gültige Rechtsgrundlage verarbeiten, 
+      oder dass wir personenbezogene Daten verarbeiten, die für unseren Auswahlprozess nicht relevant sind, 
+      setzen Sie sich bitte mit uns in Verbindung. Sie können unter datenschutz(at)einfachIOTA(punkt)de Kontakt mit uns aufnehmen. 
+      Wir werden schnellstmöglich, und spätestens innerhalb von vier Wochen nach Eingang Ihrer Anfrage, auf Ihre Anfrage reagieren.</p>
+      
+      <h3>Tipps, Fragen und Beschwerden</h3>
+      <p>Wenn Sie andere Fragen oder Beschwerden im Hinblick auf die Verarbeitung Ihrer personenbezogenen Daten vorbringen möchten,
+        helfen wir Ihnen gern. Wir würden es auch begrüßen, wenn Sie sich mit Tipps oder Vorschlägen zur Verbesserung unserer Datenschutzpolitik an uns wenden.</p>
+
+      <h3>Sicherheit</h3>
+      <p>Wir nehmen den Schutz personenbezogener Daten sehr ernst, 
+        und wir ergreifen daher geeignete Maßnahmen, um Ihre personenbezogenen Daten vor Missbrauch, Verlust, unbefugtem Zugriff, 
+        unerwünschter Offenlegung und unbefugter Änderung zu schützen. Wenn Sie der Ansicht sind, 
+        dass Ihre personenbezogenen Daten nicht angemessen geschützt werden, 
+        oder dass es Anzeichen für Missbrauch gibt, nehmen Sie bitte 
+        unter datenschutz(at)einfachIOTA(punkt)de Kontakt mit uns auf.</p>
+
+        <h3>Beschwerde an die Datenschutzbehörde</h3>
+        <p>Abgesehen von der Möglichkeit, eine Beschwerde an uns zu richten, 
+          haben Sie auch das Recht, eine Beschwerde bei der zuständigen Aufsichtsbehörde für den
+          Schutz personenbezogener Daten vorzutragen. 
+          Sie können sich zu diesem Zweck direkt mit der Aufsichtsbehörde in Verbindung setzen</p>
   </div>
 </template>
+
+<script>
+export default {
+  methods: {
+    scrollMeTo(refName) {
+      var element = this.$refs[refName];
+      var top = element.offsetTop;
+
+      window.scrollTo(0, top);
+    }
+  }
+}
+</script>
 
 <style>
 .heading {
   padding-top: 50px;
+}
+
+.scroll {
+  color: var(--primary);
+  cursor: pointer;
 }
 </style>
 
