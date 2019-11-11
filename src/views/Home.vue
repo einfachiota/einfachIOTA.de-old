@@ -1,6 +1,12 @@
 <template>
   <div class="home">
 
+    <div class="">
+      <a target="_blank" href="https://magazin.einfachiota.de/">
+        <img src="../assets/eimag_header.jpg" class="eimag_image">
+      </a>
+    </div>
+
     <div class="hero">
       <h1 class="heading">Willkommen bei einfachIOTA.de</h1>
       <p class="sub-heading">Die Seite, die IOTA einfach erklärt!</p>
@@ -119,6 +125,11 @@ export default {
 </script>
 
 <style lang="scss">
+
+.eimag_image {
+  width: 100%;
+  margin: -5px;
+}
 .el-main {
   padding: 0px !important;
 }
