@@ -13,7 +13,7 @@
         <div class="divider"></div>
         <a href="https://magazin.einfachiota.de" target="_blank" class="footer-main-link">eiMAG</a>
         <router-link to="/devtools" class="footer-main-link">Dev Tools</router-link>
-        <router-link to="/million" class="footer-main-link">hMILLIONÄR</router-link>
+        <router-link to="/million" class="footer-main-link">Millionär</router-link>
         <router-link to="/supporter" class="footer-main-link">Unterstützer</router-link>
         <router-link to="/stats" class="footer-main-link">Statistiken</router-link>
       </div>
