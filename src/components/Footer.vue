@@ -9,29 +9,22 @@
         <p>Unsere Aufgabe ist es, deutschsprachigen Inhalt rund um IOTA bereitzustellen und IOTA in einfacher Sprache zu erklären.</p>
       </div>
       <div class="footer-main">
-        <h4>Mehr</h4>
+        <h4>einfachMEHR</h4>
         <div class="divider"></div>
-
-        <router-link to="/news" class="footer-main-link">Neuigkeiten</router-link>
-        <router-link to="/knowledge" class="footer-main-link">Wissen</router-link>
-        <router-link to="/projects" class="footer-main-link">Projekte</router-link>
-        <router-link to="/workshop" class="footer-main-link">Workshop</router-link>
-        <router-link to="/tutorials" class="footer-main-link">Tutorials</router-link>
-        <router-link to="/coordicide" class="footer-main-link">Coordicide</router-link>
-        <router-link to="/supporter" class="footer-main-link">Unterstützer</router-link>
+        <a href="https://magazin.einfachiota.de" target="_blank" class="footer-main-link">eiMAG</a>
         <router-link to="/devtools" class="footer-main-link">Dev Tools</router-link>
+        <router-link to="/million" class="footer-main-link">Millionär</router-link>
+        <router-link to="/supporter" class="footer-main-link">Unterstützer</router-link>
         <router-link to="/stats" class="footer-main-link">Statistiken</router-link>
-        <router-link to="/million" class="footer-main-link">Millionäre</router-link>
       </div>
       <div class="footer-main">
-        <h4>Partner</h4>
+          <h4>Partner</h4>
         <div class="divider"></div>
-        <a href="https://powsrv.io/" target="_blank" class="footer-main-link">powsrv.io</a>
         <a
-          href="https://tanglebay.org/forum/"
+          href="https://tanglebay.org"
           target="_blank"
           class="footer-main-link"
-        >Tanglebay.org</a>
+        >Tangle Bay</a>
       </div>
       <div class="footer-main">
         <h4>IOTA</h4>
