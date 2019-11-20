@@ -1,11 +1,12 @@
 <template>
   <div class="home">
-
+    <!--
     <div class="">
       <a target="_blank" href="https://magazin.einfachiota.de/">
         <img src="../assets/eimag_header.jpg" class="eimag_image">
       </a>
     </div>
+    -->
 
     <div class="hero">
       <h1 class="heading">Willkommen bei einfachIOTA.de</h1>
@@ -15,7 +16,12 @@
     <div class="section section-background knowledge">
       <div class="container">
         <h2>Du bist neu bei IOTA?</h2>
-        <p>Dann haben wir genau das Richtige für dich! Die Grundlagen von IOTA haben wir in unserem Wiki für dich zusammengefasst und einfach erklärt, schau mal rein! Falls du trotzdem noch Fragen hast, zögere nicht uns zu kontaktieren!</p>
+        <p>
+          Dann haben wir genau das Richtige für dich! Die Grundlagen von IOTA
+          haben wir in unserem Wiki für dich zusammengefasst und einfach
+          erklärt, schau mal rein! Falls du trotzdem noch Fragen hast, zögere
+          nicht uns zu kontaktieren!
+        </p>
         <router-link
           to="/knowledge"
           tag="button"
@@ -31,14 +37,18 @@
           <router-link to="/news" tag="button" class="el-button el-button--primary">Alle Neuigkeiten</router-link>
         </div>
         <div class="divider"></div>
-        <LatestNews/>
+        <LatestNews />
       </div>
     </div>
 
     <div class="section section-background knowledge">
       <div class="container">
         <h2>Folge uns oder mach mit</h2>
-        <p>Folge uns auf Twitter um immer auf dem neusten Stand zu bleinen. Tritt unsere Discord Server und mach bei der Community mit oder schau auf unserem Gibthub vorbei um dir den Code unserer Projekte anzuschauen!</p>
+        <p>
+          Folge uns auf Twitter um immer auf dem neusten Stand zu bleinen. Tritt
+          unsere Discord Server und mach bei der Community mit oder schau auf
+          unserem Gibthub vorbei um dir den Code unserer Projekte anzuschauen!
+        </p>
         <a
           href="https://twitter.com/einfachIOTA"
           target="_blank"
@@ -74,19 +84,24 @@
           >Entdecke mehr Projekte</router-link>
         </div>
         <div class="divider"></div>
-        <LatestProjects/>
+        <LatestProjects />
       </div>
     </div>
 
     <div class="section section-background knowledge">
       <div class="container">
         <h2>Werde Unterstützer</h2>
-        <p>Wenn dir gefällt was wir tun, kannst du uns auf zweierlei Arten unterstützen. Du kannst unserer Community beitreten und uns bei Aufgaben und Projekten unter die Arme greifen, oder du kannst uns ein paar IOTA schicken.</p>
+        <p>
+          Wenn dir gefällt was wir tun, kannst du uns auf zweierlei Arten
+          unterstützen. Du kannst unserer Community beitreten und uns bei
+          Aufgaben und Projekten unter die Arme greifen, oder du kannst uns ein
+          paar IOTA schicken.
+        </p>
         <router-link
-            to="/supporter"
-            tag="button"
-            class="el-button el-button--primary"
-          >Unsere Unterstützer</router-link>
+          to="/supporter"
+          tag="button"
+          class="el-button el-button--primary"
+        >Unsere Unterstützer</router-link>
       </div>
     </div>
 
@@ -101,10 +116,9 @@
           >Alle Tutorials</router-link>
         </div>
         <div class="divider"></div>
-        <LatestTutorials/>
-      </div>  
+        <LatestTutorials />
+      </div>
     </div>
-
   </div>
 </template>
 
@@ -125,7 +139,6 @@ export default {
 </script>
 
 <style lang="scss">
-
 .eimag_image {
   width: 100%;
   margin: -5px;
@@ -161,7 +174,7 @@ export default {
 }
 @media only screen and (max-width: 740px) {
   .hero {
-      padding-top: 40px;
+    padding-top: 40px;
   }
   .headline-wrapper {
     flex-wrap: wrap;
@@ -169,9 +182,8 @@ export default {
       margin-bottom: 20px;
     }
   }
-  .btn-social  {
-      margin-bottom: 5px !important;
+  .btn-social {
+    margin-bottom: 5px !important;
   }
 }
-
 </style>
