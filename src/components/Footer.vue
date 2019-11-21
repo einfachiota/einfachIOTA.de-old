@@ -3,7 +3,7 @@
     <div class="row">
       <div class="footer-main">
         <router-link to="/" class="footer-logo" exact-active-class="active">
-          <img alt="einfachIOTA" class="logo" src="../assets/logo.svg">
+          <img alt="einfachIOTA" class="logo" src="../assets/logo.svg" />
         </router-link>
         <p>IOTA einfach erklärt.</p>
         <p>Unsere Aufgabe ist es, deutschsprachigen Inhalt rund um IOTA bereitzustellen und IOTA in einfacher Sprache zu erklären.</p>
@@ -11,27 +11,23 @@
       <div class="footer-main">
         <h4>einfachMEHR</h4>
         <div class="divider"></div>
-        <a href="https://magazin.einfachiota.de" target="_blank" class="footer-main-link">eiMAG</a>
+        <!--<a href="https://magazin.einfachiota.de" target="_blank" class="footer-main-link">Magazin</a>-->
         <router-link to="/devtools" class="footer-main-link">Dev Tools</router-link>
         <router-link to="/million" class="footer-main-link">Millionär</router-link>
         <router-link to="/supporter" class="footer-main-link">Unterstützer</router-link>
         <router-link to="/stats" class="footer-main-link">Statistiken</router-link>
       </div>
       <div class="footer-main">
-          <h4>Partner</h4>
+        <h4>Partner</h4>
         <div class="divider"></div>
-        <a
-          href="https://tanglebay.org"
-          target="_blank"
-          class="footer-main-link"
-        >Tangle Bay</a>
+        <a href="https://tanglebay.org" target="_blank" class="footer-main-link">Tangle Bay</a>
       </div>
       <div class="footer-main">
         <h4>IOTA</h4>
         <div class="divider"></div>
         <a href="https://www.iota.org" target="_blank" class="footer-main-link">Offizielle Webseite</a>
-        <a href="https://ecosystem.iota.org" target="_blank" class="footer-main-link">Ökosystem</a>
-        <a href="https://blog.iota.org" target="_blank" class="footer-main-link">Blog</a>
+        <a href="https://blog.iota.org" target="_blank" class="footer-main-link">News</a>
+        <a href="/#/pages/linkliste" class="footer-main-link">Mehr</a>
       </div>
     </div>
     <div class="row footer-bottom">
