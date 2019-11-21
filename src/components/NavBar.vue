@@ -55,14 +55,6 @@
       </router-link>
       <router-link
         v-on:click.native="navStateOpen = false"
-        to="/coordicide"
-        class="nav-item"
-        active-class="active"
-      >
-        <span>Coordicide</span>
-      </router-link>
-      <router-link
-        v-on:click.native="navStateOpen = false"
         to="/supporter"
         class="nav-item"
         active-class="active"
@@ -118,7 +110,7 @@ export default {
     position: relative;
     overflow: hidden;
     height: 100%;
-    padding: 0 50px;
+    padding: 0 40px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -135,6 +127,7 @@ export default {
       padding: 0 20px;
       opacity: 1;
       img.logo {
+        margin: 50px;
         width: auto;
         height: 80px;
         transition: all 200ms ease-in-out;
