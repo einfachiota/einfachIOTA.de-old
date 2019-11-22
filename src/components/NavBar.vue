@@ -127,9 +127,8 @@ export default {
       padding: 0 20px;
       opacity: 1;
       img.logo {
-        margin: 50px;
         width: auto;
-        height: 80px;
+        height: 65px;
         transition: all 200ms ease-in-out;
       }
     }
@@ -163,6 +162,14 @@ export default {
       &:before {
         width: 10px;
       }
+    }
+  }
+}
+.nav-item--logo {
+  &:hover,
+  &.active {
+    &:before {
+      display: none;
     }
   }
 }

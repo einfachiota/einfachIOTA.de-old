@@ -68,6 +68,7 @@
     }
     .logo {
       height: 100px;
+      margin-left: -6px;
     }
     h4 {
       font-size: 20px;
