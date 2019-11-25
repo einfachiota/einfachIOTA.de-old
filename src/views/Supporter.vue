@@ -202,14 +202,14 @@
               href="https://github.com/iotaledger/ict"
             >IOTA controlled agent</a>
           </td>
-          <td>Leichtgewichtiger Node für das finale IOTA Protokoll</td>
+          <td>Leichtgewichtiger Node für das doch nicht finale IOTA Protokoll</td>
           <td>
             <a target="_blank" rel="noopener noreferrer" href="https://www.einfachiota.de/#/post/projekt-der-woche-iota-controlled-agent">zum Artikel</a>
           </td>
         </tr>
         <tr>
           <td>
-            <a target="_blank" rel="noopener noreferrer" href="https://www.iota-talk.de/">IOTA Talk</a>
+            <a target="_blank" rel="noopener noreferrer" href="https://iota-talk.com/">IOTA Talk</a>
           </td>
           <td>Forum für IOTA Community</td>
           <td>
@@ -260,10 +260,10 @@
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://www.dropbox.com/s/aeenc8ng8ftz9kt/IOTA%20Einsteiger%20Guide.doc?dl=0"
+              href="https://iota-einsteiger-guide.de/"
             >IOTA Einsteiger Guide</a>
           </td>
-          <td>Einsteiger Guide für IOTA: Word Datei mit fast 100 Seiten</td>
+          <td>Der Einstieg zur großen Vision der IOTA Foundation.</td>
           <td>
             <a target="_blank" rel="noopener noreferrer" href="https://www.einfachiota.de/#/post/projekt-der-woche-iota-einsteiger-guide">zum Artikel</a>
           </td>
@@ -327,7 +327,7 @@
         </tr>
          <tr>
           <td>
-            <a target="_blank" rel="noopener noreferrer" href="www.easy-passphrase-saver.de">IOTA Seed Saver</a>
+            <a target="_blank" rel="noopener noreferrer" href="https://easy-passphrase-saver.de/">IOTA Seed Saver</a>
           </td>
           <td>Edelstahlplatte zur Sicherung des Seeds oder Passphrase </td>
           <td>
@@ -336,7 +336,7 @@
         </tr>
         <tr>
         <td>
-          <a target="_blank" rel="noopener noreferrer" href="www.deposy.org">Deposy</a>
+          <a target="_blank" rel="noopener noreferrer" href="https://www.deposy.org/">Deposy</a>
         </td>
         <td>innovatives Pfandsystem mit IOTA</td>
         <td>
