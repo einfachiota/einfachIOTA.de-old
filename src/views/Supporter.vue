@@ -19,6 +19,24 @@
         >Adresse kopieren!</button>
       </div>
     </div>
+    <div class="container">
+      <div class="address">
+        <h3>Trinity Deep Links</h3>
+        <p>Spende jetzt einfach mit IOTA Trininty Deep Links*</p>
+        <p></p>
+        <a :href="`iota://${address}?amount=1&message=IOTALove`">1 IOTA - #IOTALove</a>
+        <br />
+        <br />
+        <a :href="`iota://${address}?amount=1000000&message=IOTALove`">1 MIOTA - #strongIOTALove</a>
+        <br />
+        <br />
+        <a :href="`iota://${address}?amount=10000000&message=IOTALove`">10 MIOTA - #strongerIOTALove</a>
+        <br />
+        <br />
+        <a :href="`iota://${address}?amount=100000000&message=IOTALove`">100 MIOTA - #strongestIOTALove</a>
+        <p>*Dein Trininty Wallet muss dafür geöffnet sein.</p>
+      </div>
+    </div>
     <div class="hero">
       <div class="container">
         <h1 class="heading">Unsere Freunde</h1>
