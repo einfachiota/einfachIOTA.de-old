@@ -34,7 +34,7 @@
         <br />
         <br />
         <a :href="`iota://${address}?amount=100000000&message=IOTALove`">100 MIOTA - #strongestIOTALove</a>
-        <p>*Dein Trininty Wallet muss dafür geöffnet sein.</p>
+        <p>*Dein Trinity Wallet muss dafür geöffnet sein.</p>
       </div>
     </div>
     <div class="hero">
