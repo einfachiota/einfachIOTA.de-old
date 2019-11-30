@@ -22,19 +22,18 @@
     <div class="container">
       <div class="address">
         <h3>Trinity Deep Links</h3>
-        <p>Spende jetzt einfach mit IOTA Trininty Deep Links*</p>
+        <p>Spende jetzt einfach mit IOTA Trininty Deep Links</p>
         <p></p>
-        <a :href="`iota://${address}?amount=1&message=IOTALove`">1 IOTA - #IOTALove</a>
+        <a :href="`iota://${address}?amount=1&message=IOTALove`">1 IOTA - #einfachIOTALove</a>
         <br />
         <br />
-        <a :href="`iota://${address}?amount=1000000&message=IOTALove`">1 MIOTA - #strongIOTALove</a>
+        <a :href="`iota://${address}?amount=1000000&message=IOTALove`">1 MIOTA - #einfachMIOTALove</a>
         <br />
         <br />
-        <a :href="`iota://${address}?amount=10000000&message=IOTALove`">10 MIOTA - #strongerIOTALove</a>
+        <a :href="`iota://${address}?amount=10000000&message=IOTALove`">10 MIOTA - #zehnfachMIOTALove</a>
         <br />
         <br />
-        <a :href="`iota://${address}?amount=100000000&message=IOTALove`">100 MIOTA - #strongestIOTALove</a>
-        <p>*Dein Trininty Wallet muss dafür geöffnet sein.</p>
+        <a :href="`iota://${address}?amount=100000000&message=IOTALove`">100 MIOTA - #HundermalMIOTALove</a>
       </div>
     </div>
     <div class="hero">
