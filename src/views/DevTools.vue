@@ -47,6 +47,20 @@
           <el-button type="primary" @click="onSubmit">Senden</el-button>
         </el-form-item>
       </el-form>
+      <br />
+      <br />
+
+      <h2>Spark Link generieren</h2>
+      <select v-model="selected" @change="spark">
+        <option value="Mainnet Sparklink">Mainnet Sparklink</option>
+        <option>Devnet Sparklink</option>
+        <option>CDA</option>
+      </select>
+      <span>Ausgewählt: {{ selected }}</span>
+      <input v-model="inputaddress" placeholder="IOTA Adresse" class="el-input__inner" @input="spark"/>
+      <input v-model="iotaamount" placeholder="IOTA Menge" class="el-input__inner" @input="spark"/>
+      <p v-if="sparkerror">Fehler: {{ sparkresult }}</p>
+      <a v-else target="_blank" :href="sparkresult"> {{ sparkresult }}</a>
     </div>
   </div>
 </template>
@@ -56,7 +70,9 @@ const iotaLibrary = require("@iota/core");
 const iota = iotaLibrary.composeAPI({
   provider: "https://nodes.devnet.thetangle.org:443"
 });
-const Converter = require("@iota/converter");
+const converter = require("@iota/converter");
+const checksum = require('@iota/checksum');
+const cda = require('@iota/cda');
 
 import generateSeed from "../utils/generateSeed.js";
 export default {
@@ -68,7 +84,12 @@ export default {
         message: "",
         address: ""
       },
-      transaction: ""
+      transaction: "",
+      selected: "Mainnet Sparklink",
+      inputaddress: "",
+      sparkresult: "",
+      iotaamount: "",
+      sparkerror: true
     };
   },
   methods: {
@@ -92,7 +113,7 @@ export default {
         {
           value: 0,
           address: this.form.address, // Where the data is being sent
-          message: Converter.asciiToTrytes(this.form.message) // The message converted into trytes
+          message: converter.asciiToTrytes(this.form.message) // The message converted into trytes
         }
       ];
       console.log(transfers);
@@ -113,8 +134,66 @@ export default {
         .catch(err => {
           console.log(err);
         });
+    },
+    async spark(){
+    try {
+      let address = this.inputaddress
+      let value = this.iotaamount
+      //validate address
+      if (!(address.length == 90 || address.length == 81) || /[E-V]/.test(address.slice(80, 81))) {
+        throw 'Invalide Adresse'
+      }
+      if (address.length == 90) {
+        if (!checksum.isValidChecksum(address)) {
+          throw 'Invalide Checksumme'
+        }
+      }
+      //check amount
+      if (!Number.isInteger(parseInt(value)) || value < 0 || typeof value == 'undefined') {
+        throw 'Invalide IOTA Menge'
+      }
+
+      let cdaobject = generateCDA(address, value)
+      switch (this.selected) {
+        case 'Mainnet Sparklink':
+          this.sparkresult = generateSparkLink(cdaobject)
+          break;
+        case 'Devnet Sparklink':
+          this.sparkresult = generateSparkLink(cdaobject, 'devnet')
+          break;
+        case 'CDA':
+          this.sparkresult = cdaobject
+      }
+
+      function generateCDA(address, value) {
+        let timeoutAt = Math.floor(Date.now() / 1000 + 24 * 60 * 60)
+        let expectedAmount = value
+        let multiUse = false
+        let checksum = converter.tritsToTrytes(cda.CDAChecksum(converter.trytesToTrits(address), converter.valueToTrits(timeoutAt), cda.CDAMultiUseBooleanAsTrit(multiUse), converter.valueToTrits(expectedAmount || 0)))
+        let addressWithCDAChecksum = address.slice(0, 81) + checksum
+        let newCDA = { address: addressWithCDAChecksum, timeoutAt, multiUse, expectedAmount }
+        cda.verifyCDAChecksum(newCDA)
+        return newCDA
+      }
+
+      function generateSparkLink(cda, network) {
+        let { address, timeoutAt, expectedAmount } = cda
+        let link
+        if (network == 'devnet') {
+          link = 'https://spark-devnet.iota.org//?address=' + address + '&timeoutAt=' + timeoutAt + '&amount=' + expectedAmount
+        } else {
+          link = 'https://spark.iota.org/?address=' + address + '&timeoutAt=' + timeoutAt + '&amount=' + expectedAmount
+        }
+        return link
+      }
+this.sparkerror = false
+    } catch (e) {
+      console.log(e)
+      this.sparkerror = true
+      this.sparkresult = e
     }
-  },
+  }
+},
   created() {
     this.seed = generateSeed();
     this.generateNewAddress();
