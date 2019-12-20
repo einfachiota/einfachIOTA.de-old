@@ -5,6 +5,8 @@
 npm install
 ```
 
+Add a `.env` file with `VUE_APP_API_URL="https://blog.einfachiota.de"` in it
+
 ### Compiles and hot-reloads for development
 ```
 npm run serve
