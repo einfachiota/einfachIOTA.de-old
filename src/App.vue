@@ -3,7 +3,7 @@
     <div class="magazine-ad">
       <span class="magazine-text">Das einfachIOTA Magazin, jetzt die Erstausgabe sichern!</span>
       <span class="magazine-text__mobile">einfachIOTA Magazin</span>
-      <button class="el-button el-button--primary">
+      <button href="https://magazin.einfachiota.de" class="el-button el-button--primary">
         Zum Shop
       </button>
     </div>
