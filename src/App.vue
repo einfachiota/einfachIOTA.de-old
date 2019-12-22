@@ -1,7 +1,8 @@
 <template>
   <el-container>
     <div class="magazine-ad">
-      <span>Das einfachIOTA Magazin, jetzt die Erstausgabe sichern!</span>
+      <span class="magazine-text">Das einfachIOTA Magazin, jetzt die Erstausgabe sichern!</span>
+      <span class="magazine-text__mobile">einfachIOTA Magazin</span>
       <button class="el-button el-button--primary">
         Zum Shop
       </button>
@@ -67,6 +68,9 @@ body {
   box-sizing: border-box;
   border-bottom: 1px solid var(--light);
   z-index: 1000;
+  .magazine-text__mobile {
+    display: none;
+  }
   .el-button {
     animation: shake-animation 3.72s ease infinite;
     transform-origin: 50% 50%;
@@ -216,6 +220,28 @@ button.el-button.el-button--light {
   p {
     font-size: 16px;
     line-height: 1.5;
+  }
+}
+
+@media only screen and (max-width: 920px) {
+  .magazine-ad {
+    span {
+      font-size: 16px;
+    }
+  }
+}
+
+@media only screen and (max-width: 424px) {
+  .magazine-ad {
+    span {
+      display: none;
+    }
+    .magazine-text {
+      display: none;
+    }
+    .magazine-text__mobile {
+      display: block;
+    }
   }
 }
 </style>
