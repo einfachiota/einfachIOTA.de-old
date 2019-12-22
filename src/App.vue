@@ -3,9 +3,9 @@
     <div class="magazine-ad">
       <span class="magazine-text">Das einfachIOTA Magazin, jetzt die Erstausgabe sichern!</span>
       <span class="magazine-text__mobile">einfachIOTA Magazin</span>
-      <button href="https://magazin.einfachiota.de" class="el-button el-button--primary">
+      <a target="_blank" href="https://magazin.einfachiota.de" class="el-button el-button--primary">
         Zum Shop
-      </button>
+      </a>
     </div>
     <el-header>
       <NavBar />
@@ -75,6 +75,7 @@ body {
     animation: shake-animation 3.72s ease infinite;
     transform-origin: 50% 50%;
     margin-left: 20px;
+    text-decoration: none;
   }
 }
 
