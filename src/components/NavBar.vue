@@ -87,7 +87,7 @@ export default {
 
 .main-nav {
   position: fixed;
-  top: 0;
+  top: 60px;
   left: 0;
   z-index: 10;
   height: 70px;

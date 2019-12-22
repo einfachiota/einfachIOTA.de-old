@@ -1,5 +1,11 @@
 <template>
   <el-container>
+    <div class="magazine-ad">
+      <span>Das einfachIOTA Magazin, jetzt die Erstausgabe sichern!</span>
+      <button class="el-button el-button--primary">
+        Zum Shop
+      </button>
+    </div>
     <el-header>
       <NavBar />
     </el-header>
@@ -32,6 +38,44 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: var(--dark);
+}
+
+@keyframes shake-animation {
+  0% { transform:translate(0,0) }
+  1.78571% { transform:translate(5px,0) }
+  3.57143% { transform:translate(0,0) }
+  5.35714% { transform:translate(5px,0) }
+  7.14286% { transform:translate(0,0) }
+  8.92857% { transform:translate(5px,0) }
+  10.71429% { transform:translate(0,0) }
+  100% { transform:translate(0,0) }
+}
+
+.magazine-ad {
+  position: fixed;
+  height: 60px;
+  background-color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: var(--dark);
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "Roboto Slab", serif;
+  padding: 0 10px;
+  box-sizing: border-box;
+  border-bottom: 1px solid var(--light);
+  z-index: 1000;
+  .el-button {
+    animation: shake-animation 3.72s ease infinite;
+    transform-origin: 50% 50%;
+    margin-left: 20px;
+  }
+}
+
+.el-main {
+  margin-top: 150px;
 }
 
 h1,
