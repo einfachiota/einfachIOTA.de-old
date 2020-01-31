@@ -17,6 +17,7 @@ import Page from './views/Page.vue'
 import Supporter from './views/Supporter.vue'
 import Stats from './views/Stats.vue'
 import Million from './views/Million.vue'
+import Shop from './views/Shop.vue'
 
 Vue.use(Router)
 
@@ -121,6 +122,11 @@ export default new Router({
       path: '/pages/:slug',
       name: 'page',
       component: Page
+    },
+    {
+      path: '/shop',
+      name: 'shop',
+      component: Shop
     },
   ]
 })
