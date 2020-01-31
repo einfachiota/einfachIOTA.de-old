@@ -1,5 +1,6 @@
 <template>
   <el-container>
+    <!--
     <div class="magazine-ad">
       <span class="magazine-text">Das einfachIOTA Magazin, jetzt die Erstausgabe sichern!</span>
       <span class="magazine-text__mobile">einfachIOTA Magazin</span>
@@ -7,6 +8,7 @@
         Zum Shop
       </a>
     </div>
+     -->
     <el-header>
       <NavBar />
     </el-header>
