@@ -138,7 +138,7 @@ export default {
     async spark(){
     try {
       let address = this.inputaddress
-      let value = this.iotaamount
+      let value = parseInt(this.iotaamount)
       //validate address
       if (!(address.length == 90 || address.length == 81) || /[E-V]/.test(address.slice(80, 81))) {
         throw 'Invalide Adresse'
