@@ -166,7 +166,7 @@ export default {
       }
 
       function generateCDA(address, value) {
-        let timeoutAt = Math.floor(Date.now() / 1000 + 24 * 60 * 60)
+        let timeoutAt = Math.floor(Date.now() + 24 * 60 * 60 * 1000)
         let expectedAmount = value
         let multiUse = false
         let checksum = converter.tritsToTrytes(cda.CDAChecksum(converter.trytesToTrits(address), converter.valueToTrits(timeoutAt), cda.CDAMultiUseBooleanAsTrit(multiUse), converter.valueToTrits(expectedAmount || 0)))
