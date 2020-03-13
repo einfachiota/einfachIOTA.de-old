@@ -45,7 +45,7 @@ export default {
           limit: this.per_page,
           page: page,
           include: "tags,authors",
-          filter: "tag:projekt-der-woche"
+          filter: "tag:projekt-der-woche+tag:de"
         })
         .then(posts => {
           this.current_page = posts.meta.pagination.page;

@@ -44,7 +44,7 @@ export default {
           limit: 12,
           page: page,
           include: "tags,authors",
-          filter: "tag:news"
+          filter: "tag:news+tag:de"
         })
         .then(posts => {
           this.current_page = posts.meta.pagination.page

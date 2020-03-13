@@ -30,7 +30,7 @@ export default {
     loadData() {
       // fetch 5 posts, including related tags and authors
       api.posts
-        .browse({ limit: 3, include: "tags,authors", filter: 'tag:news' })
+        .browse({ limit: 3, include: "tags,authors", filter: 'tag:news+tag:de' })
         .then(posts => {
           this.posts = posts;
           console.log("posts", posts)
